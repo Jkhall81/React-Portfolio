@@ -12,9 +12,11 @@ const Main = () => {
         alt="background image"
       />
       <div className="w-full h-screen absolute top-0 left-0 bg-black/50">
-        <div>
-          <h1>I'm Jason Hall</h1>
-          <h2>
+        <div className="max-w-[700px] m-auto h-full w-full flex flex-col justify-center lg:items-start items-center">
+          <h1 className="text-white sm:text-5xl text-4xl font-bold">
+            I'm Jason Hall
+          </h1>
+          <h2 className="text-white flex sm:text-3xl text-2xl pt-4">
             I'm a
             <TypeAnimation
               sequence={[
@@ -31,10 +33,10 @@ const Main = () => {
               style={{ fontSize: "1em", paddingLeft: "5px" }}
             />
           </h2>
-          <div>
-            <FaGithub className="cursor-pointer" color="white" size={20} />
-            <FaFacebookF className="cursor-pointer" color="white" size={20} />
-            <FaLinkedinIn className="cursor-pointer" color="white" size={20} />
+          <div className="flex justify-between pt-6 max-w-[200px] w-full">
+            <FaGithub className="cursor-pointer" color="white" size={30} />
+            <FaFacebookF className="cursor-pointer" color="white" size={30} />
+            <FaLinkedinIn className="cursor-pointer" color="white" size={30} />
           </div>
         </div>
       </div>
