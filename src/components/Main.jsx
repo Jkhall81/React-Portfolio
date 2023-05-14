@@ -11,7 +11,7 @@ const Main = () => {
         src={background_image}
         alt="background image"
       />
-      <div className="w-full h-screen absolute top-0 left-0 bg-black/50">
+      <div className="w-full h-screen absolute top-0 left-0 bg-black/40 bg-gradient-to-r from-black">
         <div className="max-w-[700px] m-auto h-full w-full flex flex-col justify-center lg:items-start items-center">
           <h1 className="text-white sm:text-5xl text-4xl font-bold">
             I'm Jason Hall
