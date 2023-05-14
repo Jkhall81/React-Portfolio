@@ -6,7 +6,7 @@ const SkillItem = ({ title, experience, icon }) => {
       <li className="flex flex-col items-center">
         <div />
 
-        <span className="text-center">
+        <span className="text-center text-2xl">
           <strong>{title}</strong>
         </span>
 

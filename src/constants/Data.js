@@ -1,7 +1,8 @@
 import { AiFillHtml5, AiOutlineConsoleSql, AiFillGithub } from "react-icons/ai";
 import { SiCss3 } from "react-icons/si";
-import { DiJavascript1, DiDjango } from "react-icons/di";
+import { DiJavascript1 } from "react-icons/di";
 import { FaReact, FaPython } from "react-icons/fa";
+import { TbBrandDjango } from "react-icons/tb";
 
 const data = [
   {
@@ -32,7 +33,7 @@ const data = [
   {
     title: "Django",
     experience: "1 Year",
-    icon: DiDjango,
+    icon: TbBrandDjango,
   },
   {
     title: "SQL",

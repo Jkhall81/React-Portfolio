@@ -1,17 +1,17 @@
 import React from "react";
 import { data } from "../constants/Data";
 import SkillItem from "./SkillItem";
-import tiger from "../assets/tiger.jpg";
+import skillz from "../assets/skills.jpg";
 
 const Skills = () => {
   return (
     <div
       id="skills"
-      className="max-w-[1040px] m-auto md:pl-20 md:pr-20 p-4 py-16 relative h-screen"
+      className="w-full m-auto md:pl-20 md:pr-20 p-4 py-16 relative h-screen"
     >
       <div
-        className="absolute top-0 left-0 right-0 bottom-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${tiger})` }}
+        className="absolute top-0 left-0 h-screen w-full bg-cover"
+        style={{ backgroundImage: `url(${skillz})`, backgroundSize: "cover" }}
       ></div>
       <div className="w-full h-screen absolute top-0 left-0 bg-black/30 bg-gradient-to-r from-black"></div>
       <div className="relative z-10 text-white flex flex-wrap justify-center h-full">
