@@ -16,7 +16,7 @@ const Projects = () => {
         style={{ backgroundImage: `url(${backGImg})`, backgroundSize: "cover" }}
       ></div>
       <div className="w-full h-screen absolute top-0 left-0 bg-black/30 bg-gradient-to-r from-black"></div>
-      <div className="relative">
+      <div className="relative max-w-6xl mx-auto mb-12">
         <h1 className="text-4xl font-bold text-center text-white">Projects</h1>
         <p className="text-center py-8 text-white">
           These projects are showcases of my front-end work, demonstrating the
