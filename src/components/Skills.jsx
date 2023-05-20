@@ -17,7 +17,10 @@ const Skills = () => {
       <div className="relative z-10 text-white flex flex-wrap justify-center h-full">
         <h1 className="text-4xl font-bold text-center w-full mb-8">Skills</h1>
         {data.map((item, idx) => (
-          <div className="w-full md:w-1/3 p-4 flex justify-center">
+          <div
+            key={idx}
+            className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 flex justify-center"
+          >
             <SkillItem
               key={idx}
               title={item.title}

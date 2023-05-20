@@ -10,15 +10,19 @@ import { BsPerson } from "react-icons/bs";
 
 const Sidenav = () => {
   const [nav, setNav] = useState(false);
+  const [menuColor, setMenuColor] = useState("text-white");
+
   const handleNav = () => {
     setNav(!nav);
+    setMenuColor(nav ? "text-white" : "text-black");
   };
 
   return (
     <div>
       <AiOutlineMenu
+        size={30}
         onClick={handleNav}
-        className="absolute top-4 right-4 z-[99] md:hidden"
+        className={`absolute top-4 right-4 z-[99] md:hidden cursor-pointer ${menuColor}`}
       />
       {nav ? (
         <div className="fixed w-full h-screen bg-white/90 flex flex-col justify-center items-center z-20">
