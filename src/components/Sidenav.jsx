@@ -11,11 +11,10 @@ import resumePDF from "../assets/JasonHallResume2023.pdf";
 
 const Sidenav = () => {
   const [nav, setNav] = useState(false);
-  const [menuColor, setMenuColor] = useState("text-white");
+  const menuColor = nav ? "text-black" : "text-white";
 
   const handleNav = () => {
     setNav(!nav);
-    setMenuColor(nav ? "text-white" : "text-black");
   };
 
   const handleLinkClick = () => {
@@ -24,11 +23,11 @@ const Sidenav = () => {
 
   return (
     <div>
-      <AiOutlineMenu
-        size={30}
-        onClick={handleNav}
-        className={`absolute top-4 right-4 z-[99] md:hidden cursor-pointer ${menuColor}`}
-      />
+      <div
+        className={`fixed top-4 right-4 z-[99] md:hidden cursor-pointer ${menuColor}`}
+      >
+        <AiOutlineMenu size={50} onClick={handleNav} />
+      </div>
       {nav ? (
         <div className="fixed w-full h-screen bg-white/30 flex flex-col justify-center items-center z-20">
           <a
