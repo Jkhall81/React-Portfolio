@@ -9,13 +9,13 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="w-full m-auto md:pl-20 md:pr-20 p-4 py-16 relative h-screen"
+      className="w-full m-auto md:pl-20 md:pr-20 p-4 py-16 relative min-h-screen"
     >
       <div
-        className="absolute top-0 left-0 h-screen w-full bg-cover"
+        className="absolute top-0 left-0 h-full w-full bg-cover"
         style={{ backgroundImage: `url(${backGImg})`, backgroundSize: "cover" }}
       ></div>
-      <div className="w-full h-screen absolute top-0 left-0 bg-black/30 bg-gradient-to-r from-black"></div>
+      <div className="w-full h-full absolute top-0 left-0 bg-black/30 bg-gradient-to-r from-black"></div>
       <div className="relative max-w-6xl mx-auto mb-12">
         <h1 className="text-4xl font-bold text-center text-white">Projects</h1>
         <p className="text-center py-8 text-white">
@@ -25,7 +25,7 @@ const Projects = () => {
           up-to-date data, providing users with dynamic and real-time
           information.
         </p>
-        <div className="grid sm:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12">
           <ProjectItem
             img={cryptoImg}
             title="Crypto Page"
