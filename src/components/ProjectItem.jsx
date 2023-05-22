@@ -15,7 +15,7 @@ const ProjectItem = ({ img, title, link }) => {
         <p className="pb-4 pt-2 text-2xl text-white text-center">React Js</p>
         <a href={link}>
           <p className="text-center p-2 rounded-lg bg-white text-gray-700 font-bold cursor-pointer text-lg">
-            Link to Page
+            Visit Website
           </p>
         </a>
       </div>
