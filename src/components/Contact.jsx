@@ -15,14 +15,15 @@ const Contact = () => {
         }}
       ></div>
       <div className="w-full h-screen absolute top-0 left-0 bg-black/30 bg-gradient-to-r from-black"></div>
-      <div className="relative">
-        <h1 className="py-=4 text-4xl font-bold text-center text-white">
+      <div className="relative max-w-6xl mx-auto">
+        <h1 className="py-4 text-4xl font-bold text-center text-white">
           Contact
         </h1>
         <form
           action="https://getform.io/f/954d706a-56a6-48ab-8b04-3c01d8278bd1"
           method="POST"
           encType="multipart/form-data"
+          className="mx-4 md:mx-auto md:max-w-3xl"
         >
           <div className="grid md:grid-cols-2 gap-4 w-full py-2">
             <div className="flex flex-col">
