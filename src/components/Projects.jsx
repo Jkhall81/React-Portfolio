@@ -4,6 +4,7 @@ import cryptoImg from "../assets/cryptocurrency.jpeg";
 import netflix from "../assets/netflix.png";
 import dataImg from "../assets/data-security.jpeg";
 import backGImg from "../assets/projects.png";
+import postit from "../assets/postit.jpg";
 
 const Projects = () => {
   return (
@@ -42,6 +43,11 @@ const Projects = () => {
             img={dataImg}
             title="Data Security Page"
             link="https://spiffy-squirrel-eb6e18.netlify.app/"
+          />
+          <ProjectItem
+            img={postit}
+            title="Social Media App"
+            link="https://postit-81wu.onrender.com/"
           />
         </div>
       </div>
