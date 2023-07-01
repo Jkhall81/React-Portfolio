@@ -31,23 +31,27 @@ const Projects = () => {
             img={cryptoImg}
             title="Crypto Page"
             link="https://cryptobase-f3acf.firebaseapp.com/"
+            textColor="white"
           />
 
           <ProjectItem
             img={netflix}
             title="Netflix Page"
             link="https://melodious-lollipop-6e6ded.netlify.app/"
+            textColor="white"
           />
 
           <ProjectItem
             img={dataImg}
             title="Data Security Page"
             link="https://spiffy-squirrel-eb6e18.netlify.app/"
+            textColor="black"
           />
           <ProjectItem
             img={postit}
             title="Social Media App"
             link="https://postit-81wu.onrender.com/"
+            textColor="black"
           />
         </div>
       </div>
