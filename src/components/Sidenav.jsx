@@ -5,6 +5,7 @@ import {
   AiOutlineHome,
   AiOutlineProject,
   AiOutlineMail,
+  AiFillHeart,
 } from "react-icons/ai";
 import { BsPerson } from "react-icons/bs";
 import resumePDF from "../assets/JasonHallResume2023.pdf";
@@ -63,6 +64,14 @@ const Sidenav = () => {
             <span className="pl-4">Resume</span>
           </a>
           <a
+            href="#poem"
+            onClick={handleLinkClick}
+            className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
+          >
+            <AiFillHeart size={20} />
+            <span className="pl-4">Poem For Andrea</span>
+          </a>
+          <a
             href="#contact"
             onClick={handleLinkClick}
             className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
@@ -104,6 +113,13 @@ const Sidenav = () => {
             className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
           >
             <BsPerson size={20} />
+          </a>
+          <a
+            href="#poem"
+            title="Poem For Andrea"
+            className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
+          >
+            <AiFillHeart size={20} />
           </a>
           <a
             href="#contact"

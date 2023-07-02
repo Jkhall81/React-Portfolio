@@ -3,6 +3,7 @@ import Sidenav from "./components/Sidenav";
 import Main from "./components/Main";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Poem from "./components/Poem";
 import Contact from "./components/Contact";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Main />
       <Skills />
       <Projects />
+      <Poem />
       <Contact />
     </div>
   );
