@@ -13,7 +13,6 @@ function App() {
       <Main />
       <Skills />
       <Projects />
-      <Poem />
       <Contact />
     </div>
   );
