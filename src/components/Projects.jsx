@@ -5,6 +5,7 @@ import netflix from "../assets/netflix.png";
 import dataImg from "../assets/data-security.jpeg";
 import backGImg from "../assets/projects.png";
 import postit from "../assets/postit.jpg";
+import movieapp from "../assets/bgpic.jpg";
 
 const Projects = () => {
   return (
@@ -51,6 +52,12 @@ const Projects = () => {
             img={postit}
             title="Social Media App"
             link="https://postit-81wu.onrender.com/"
+            textColor="black"
+          />
+          <ProjectItem
+            img={movieapp}
+            title="Flask Movie App"
+            link="https://movie-webapp.onrender.com/"
             textColor="black"
           />
         </div>
