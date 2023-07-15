@@ -64,7 +64,7 @@ const Projects = () => {
           <ProjectItem
             img={beater}
             title="Hooptievana"
-            link="https://hooptievana-csyv933fk-jkhall81.vercel.app"
+            link="https://hooptievana.vercel.app/"
             textColor="black"
           />
         </div>
