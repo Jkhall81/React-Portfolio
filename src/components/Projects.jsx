@@ -6,6 +6,7 @@ import dataImg from "../assets/data-security.jpeg";
 import backGImg from "../assets/projects.png";
 import postit from "../assets/postit.jpg";
 import movieapp from "../assets/bgpic.jpg";
+import beater from "../assets/beater2.webp";
 
 const Projects = () => {
   return (
@@ -58,6 +59,12 @@ const Projects = () => {
             img={movieapp}
             title="Flask Movie App"
             link="https://movie-webapp.onrender.com/"
+            textColor="black"
+          />
+          <ProjectItem
+            img={beater}
+            title="Hooptievana"
+            link="https://hooptievana-csyv933fk-jkhall81.vercel.app"
             textColor="black"
           />
         </div>
