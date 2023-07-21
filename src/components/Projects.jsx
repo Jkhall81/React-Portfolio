@@ -56,12 +56,6 @@ const Projects = () => {
             textColor="black"
           />
           <ProjectItem
-            img={movieapp}
-            title="Flask Movie App"
-            link="https://movie-webapp.onrender.com/"
-            textColor="black"
-          />
-          <ProjectItem
             img={beater}
             title="Hooptievana"
             link="https://hooptievana.vercel.app/"
