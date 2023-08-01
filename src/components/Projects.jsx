@@ -5,7 +5,7 @@ import netflix from "../assets/netflix.png";
 import dataImg from "../assets/data-security.jpeg";
 import backGImg from "../assets/projects.png";
 import postit from "../assets/postit.jpg";
-import movieapp from "../assets/bgpic.jpg";
+import WowL from "../assets/WowL.jpeg";
 import beater from "../assets/beater2.webp";
 
 const Projects = () => {
@@ -32,33 +32,45 @@ const Projects = () => {
           <ProjectItem
             img={cryptoImg}
             title="Crypto Page"
-            link="https://cryptobase-f3acf.firebaseapp.com/"
+            link1="https://cryptobase-f3acf.firebaseapp.com/"
+            link2="https://github.com/Jkhall81/Cryptobase"
             textColor="white"
           />
 
           <ProjectItem
             img={netflix}
             title="Netflix Page"
-            link="https://melodious-lollipop-6e6ded.netlify.app/"
+            link1="https://melodious-lollipop-6e6ded.netlify.app/"
+            link2="https://github.com/Jkhall81/Netflix"
             textColor="white"
           />
 
           <ProjectItem
             img={dataImg}
             title="Data Security Page"
-            link="https://spiffy-squirrel-eb6e18.netlify.app/"
+            link1="https://spiffy-squirrel-eb6e18.netlify.app/"
+            link2="https://github.com/Jkhall81/Data-Security-Site"
             textColor="black"
           />
           <ProjectItem
             img={postit}
             title="Social Media App"
-            link="https://postit-81wu.onrender.com/"
+            link1="https://postit-81wu.onrender.com/"
+            link2="https://github.com/Jkhall81/PostIt"
             textColor="black"
           />
           <ProjectItem
             img={beater}
             title="Hooptievana"
-            link="https://hooptievana.vercel.app/"
+            link1="https://hooptievana.vercel.app/"
+            link2="https://github.com/Jkhall81/Hooptievana"
+            textColor="black"
+          />
+          <ProjectItem
+            img={WowL}
+            title="Wow Library"
+            link1="https://wow-library.onrender.com/"
+            link2="https://github.com/Jkhall81/Wow-Library"
             textColor="black"
           />
         </div>

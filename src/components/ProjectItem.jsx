@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProjectItem = ({ img, title, link, textColor }) => {
+const ProjectItem = ({ img, title, link1, link2, textColor }) => {
   return (
     <div className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl group">
       <img
@@ -14,9 +14,14 @@ const ProjectItem = ({ img, title, link, textColor }) => {
         >
           {title}
         </h3>
-        <a href={link}>
+        <a href={link1} target="_blank">
           <p className="text-center p-2 rounded-lg bg-white text-gray-700 font-bold cursor-pointer text-lg">
             Visit Website
+          </p>
+        </a>
+        <a href={link2} target="_blank">
+          <p className="mt-3 text-center p-2 rounded-lg bg-white text-gray-700 font-bold cursor-pointer text-lg">
+            See Code
           </p>
         </a>
       </div>
