@@ -54,9 +54,9 @@ const Projects = () => {
           />
           <ProjectItem
             img={postit}
-            title="Social Media App"
-            link1="https://postit-81wu.onrender.com/"
-            link2="https://github.com/Jkhall81/PostIt"
+            title="PostIt2"
+            link1="https://post-it2.vercel.app/"
+            link2="https://github.com/Jkhall81/PostIt2"
             textColor="black"
           />
           <ProjectItem
