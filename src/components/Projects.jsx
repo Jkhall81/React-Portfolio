@@ -2,7 +2,7 @@ import React from "react";
 import ProjectItem from "./ProjectItem";
 import cryptoImg from "../assets/cryptocurrency.jpeg";
 import netflix from "../assets/netflix.png";
-import dataImg from "../assets/data-security.jpeg";
+import ecommerceImg from "../assets/Ecommerce.jpg";
 import backGImg from "../assets/projects.png";
 import postit from "../assets/postit.jpg";
 import WowL from "../assets/WowL.jpeg";
@@ -46,10 +46,10 @@ const Projects = () => {
           />
 
           <ProjectItem
-            img={dataImg}
-            title="Data Security Page"
-            link1="https://spiffy-squirrel-eb6e18.netlify.app/"
-            link2="https://github.com/Jkhall81/Data-Security-Site"
+            img={ecommerceImg}
+            title="E Commerce Page"
+            link1="https://junk-store.vercel.app/"
+            link2="https://github.com/Jkhall81/Junk-Store"
             textColor="black"
           />
           <ProjectItem
