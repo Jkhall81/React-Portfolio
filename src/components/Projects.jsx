@@ -57,7 +57,7 @@ const Projects = () => {
             title="PostIt2"
             link1="https://post-it2.vercel.app/"
             link2="https://github.com/Jkhall81/PostIt2"
-            textColor="black"
+            textColor="white"
           />
           <ProjectItem
             img={beater}
