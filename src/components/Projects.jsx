@@ -50,7 +50,7 @@ const Projects = () => {
             title="E Commerce Page"
             link1="https://junk-store.vercel.app/"
             link2="https://github.com/Jkhall81/Junk-Store"
-            textColor="black"
+            textColor="white"
           />
           <ProjectItem
             img={postit}
