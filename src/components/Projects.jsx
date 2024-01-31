@@ -2,7 +2,7 @@ import React from "react";
 import ProjectItem from "./ProjectItem";
 import cryptoImg from "../assets/cryptocurrency.jpeg";
 import netflix from "../assets/netflix.png";
-import ecommerceImg from "../assets/Ecommerce.jpg";
+import roachHotelBooking from "../assets/RoachHotelBooking.jpg";
 import backGImg from "../assets/projects.png";
 import postit from "../assets/postit.jpg";
 import WowL from "../assets/WowL.jpeg";
@@ -46,10 +46,10 @@ const Projects = () => {
           />
 
           <ProjectItem
-            img={ecommerceImg}
-            title="E Commerce Page"
-            link1="https://junk-store.vercel.app/"
-            link2="https://github.com/Jkhall81/Junk-Store"
+            img={roachHotelBooking}
+            title="Roach Hotel Booking"
+            link1="https://roach-hotel-booking.vercel.app/"
+            link2="https://github.com/Jkhall81/Roach-Hotel-Booking"
             textColor="white"
           />
           <ProjectItem
