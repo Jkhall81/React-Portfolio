@@ -1,8 +1,8 @@
 import React from "react";
 import ProjectItem from "./ProjectItem";
-import cryptoImg from "../assets/cryptocurrency.jpeg";
-import netflix from "../assets/netflix.png";
 import roachHotelBooking from "../assets/RoachHotelBooking.jpg";
+import netflix from "../assets/netflix.png";
+import ecommerceImg from "../assets/Ecommerce.jpg";
 import backGImg from "../assets/projects.png";
 import postit from "../assets/postit.jpg";
 import WowL from "../assets/WowL.jpeg";
@@ -30,11 +30,11 @@ const Projects = () => {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12">
           <ProjectItem
-            img={cryptoImg}
-            title="Crypto Page"
-            link1="https://cryptobase-f3acf.firebaseapp.com/"
-            link2="https://github.com/Jkhall81/Cryptobase"
-            textColor="white"
+            img={roachHotelBooking}
+            title="Roach Hotel Booking"
+            link1="https://roach-hotel-booking.vercel.app/"
+            link2="https://github.com/Jkhall81/Roach-Hotel-Booking"
+            textColor="black"
           />
 
           <ProjectItem
@@ -46,10 +46,10 @@ const Projects = () => {
           />
 
           <ProjectItem
-            img={roachHotelBooking}
-            title="Roach Hotel Booking"
-            link1="https://roach-hotel-booking.vercel.app/"
-            link2="https://github.com/Jkhall81/Roach-Hotel-Booking"
+            img={ecommerceImg}
+            title="E Commerce Page"
+            link1="https://junk-store.vercel.app/"
+            link2="https://github.com/Jkhall81/Junk-Store"
             textColor="white"
           />
           <ProjectItem
