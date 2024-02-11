@@ -4,7 +4,7 @@ import roachHotelBooking from "../assets/RoachHotelBooking.jpg";
 import netflix from "../assets/netflix.png";
 import ecommerceImg from "../assets/Ecommerce.jpg";
 import backGImg from "../assets/projects.png";
-import postit from "../assets/postit.jpg";
+import fuDonk from "../assets/landingpage.png";
 import WowL from "../assets/WowL.jpeg";
 import beater from "../assets/beater2.webp";
 
@@ -53,10 +53,10 @@ const Projects = () => {
             textColor="white"
           />
           <ProjectItem
-            img={postit}
-            title="PostIt2"
-            link1="https://post-it2.vercel.app/"
-            link2="https://github.com/Jkhall81/PostIt2"
+            img={fuDonk}
+            title="Fu Donk"
+            link1="https://fu-donk.vercel.app/"
+            link2="https://github.com/Jkhall81/Fu-Donk"
             textColor="black"
           />
           <ProjectItem
