@@ -1,0 +1,15 @@
+skills
+
+html faHtml5
+css   faCss3Alt
+javascript   faJs
+typescript SiTypescript
+react faReact
+nextjs SiNextdotjs
+python faPython
+flask  SiFlask
+django DiDjango
+django rest framework
+sql AiOutlineConsoleSql
+git fagitAlt
+docker FaDocker
