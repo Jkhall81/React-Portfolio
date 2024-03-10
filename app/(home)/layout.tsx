@@ -4,7 +4,7 @@ import { lusitana } from "@/lib/fonts";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="">
+    <div className="h-full">
       <MobileNav
         containerStyles="fixed top-0 right-0 sm:hidden flex justify-end h-6 w-full z-30"
         linkStyles={`${lusitana.className} text-white text-3xl`}

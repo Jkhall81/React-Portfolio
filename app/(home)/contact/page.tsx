@@ -32,7 +32,7 @@ const ContactPage = () => {
     },
   });
   return (
-    <div className="min-h-screen w-full">
+    <div className="">
       <Image
         src="/background/contact.jpg"
         fill
@@ -160,7 +160,7 @@ const ContactPage = () => {
           </form>
         </Form>
       </div>
-      <div className="w-full h-screen top-0 left-0 absolute bg-black/30 bg-gradient-to-r from-black"></div>
+      <div className="w-full h-full top-0 left-0 absolute bg-black/30 bg-gradient-to-r from-black"></div>
     </div>
   );
 };
