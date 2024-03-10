@@ -41,7 +41,7 @@ const ContactPage = () => {
       />
       <div className="w-full h-full flex flex-col justify-center items-center absolute z-10">
         <h1
-          className={`${roboto.className} text-sky-500 text-6xl mb-12 font-bold`}
+          className={`${roboto.className} text-sky-500 text-6xl mb-12 font-bold mt-40`}
         >
           Get In Touch
         </h1>
