@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 const ProjectsPage = () => {
   return (
-    <div className="h-full min-h-screen w-full relative">
+    <div className="h-full min-h-screen w-full overflow-x-hidden relative">
       <Image
         src="/background/projects.png"
         fill
