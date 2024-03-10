@@ -26,7 +26,7 @@ const AboutPage = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.4 }}
-            className="flex-1 flex justify-center items-center text-white"
+            className="w-[350px] p-2 sm:flex-1 flex justify-center items-center text-white"
           >
             <Image
               src="/image/Jason2.jpg"
@@ -43,7 +43,7 @@ const AboutPage = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.4 }}
-            className={`${lusitana.className} flex-1 flex justify-center items-center text-white text-3xl ml-[5rem]`}
+            className={`${lusitana.className} flex-1 flex justify-center items-center text-white text-xl sm:text-3xl p-4 sm:ml-[5rem]`}
           >
             <p>
               As a Full Stack Developer, I specialize in Next.js, React,
@@ -55,7 +55,7 @@ const AboutPage = () => {
               and playing Clash Royale during coding breaks.
             </p>
           </motion.div>
-          <div className="hidden sm:block flex-1 flex justify-center items-center text-white">
+          <div className="hidden flex-1 sm:flex justify-center items-center text-white">
             {/* box four */}
           </div>
         </div>
