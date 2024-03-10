@@ -23,8 +23,13 @@ export const ProjectItem = ({
 }: ProjectItemProps) => {
   return (
     <div className="relative flex flex-col justify-center items-center h-full w-full z-10 group">
-      <Image src={image} fill alt="project image" className="rounded-lg" />
-      <div className="absolute min-w-[400px] hidden group-hover:block">
+      <Image
+        src={image}
+        fill
+        alt="project image"
+        className="rounded-lg object-cover"
+      />
+      <div className="absolute min-w-[200px] sm:min-w-[400px] hidden group-hover:block">
         <h1
           className={`text-4xl text-center font-extrabold mb-4 ${roboto.className} ${textColor}`}
         >
