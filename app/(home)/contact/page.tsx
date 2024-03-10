@@ -50,13 +50,13 @@ const ContactPage = () => {
             action="https://getform.io/f/954d706a-56a6-48ab-8b04-3c01d8278bd1"
             method="POST"
           >
-            <div className="flex flex-row mb-3">
+            <div className="flex flex-col sm:flex-row mb-3 w-[300px] sm:w-full">
               {/* Name */}
               <FormField
                 control={form.control}
                 name="name"
                 render={({ field }) => (
-                  <FormItem>
+                  <FormItem className="mb-3">
                     <FormLabel
                       className={`${lusitana.className} text-sky-500 text-3xl`}
                     >
@@ -64,7 +64,7 @@ const ContactPage = () => {
                     </FormLabel>
                     <FormControl>
                       <Input
-                        className="w-[250px]"
+                        className="w-full"
                         placeholder="Your name..."
                         {...field}
                       />
@@ -80,13 +80,13 @@ const ContactPage = () => {
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel
-                      className={`${lusitana.className} text-sky-500 text-3xl ml-5`}
+                      className={`${lusitana.className} text-sky-500 text-3xl sm:ml-5`}
                     >
                       Phone
                     </FormLabel>
                     <FormControl>
                       <Input
-                        className="w-[250px] ml-5"
+                        className="w-full sm:w-[250px] sm:ml-5"
                         placeholder="Your digits..."
                         {...field}
                       />
