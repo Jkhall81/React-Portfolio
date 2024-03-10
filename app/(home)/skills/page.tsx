@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 const SkillPage = () => {
   return (
-    <section className="min-h-screen relative">
+    <section className="overflow-x-hidden min-h-screen relative">
       <Image
         src="/background/skills.jpg"
         fill
