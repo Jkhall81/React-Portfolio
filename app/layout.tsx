@@ -7,12 +7,12 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Jason Hall",
-    template: "%s - Software Engineer",
+    default: "Jason Hall - Software Engineer",
+    template: "Jason Hall - %s",
   },
   description: "Web Development Portfolio Website of Jason Hall",
-  icons: {
-    icon: [{ href: "/favicon.ico", url: "/favicon.ico" }],
+  twitter: {
+    card: "summary_large_image",
   },
 };
 
