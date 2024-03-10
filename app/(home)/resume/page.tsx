@@ -4,7 +4,7 @@ const ResumePage = () => {
   return (
     <div className="bg-black h-screen flex justify-center items-center">
       <iframe
-        className="pt-11"
+        className="pt-16"
         src={pdfSrc}
         width="100%"
         height="100%"

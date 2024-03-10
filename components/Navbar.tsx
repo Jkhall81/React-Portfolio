@@ -5,6 +5,11 @@ import { anton } from "@/lib/fonts";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
+interface NavbarProps {
+  containerStyles: string;
+  linkStyles: string;
+}
+
 const navlinks = [
   {
     name: "home",
@@ -32,11 +37,11 @@ const navlinks = [
   },
 ];
 
-export const Navbar = () => {
+export const Navbar = ({ containerStyles, linkStyles }: NavbarProps) => {
   const pathname = usePathname();
   console.log(pathname);
   return (
-    <nav className="flex justify-between top-0 left-0 right-0 fixed h-6 w-full border-none text-white p-6 capitalize z-50 text-xl items-center xl:max-w-[700px] sm:max-w-[580px]">
+    <nav className={`${containerStyles} ${linkStyles}`}>
       {navlinks.map((item, index) => {
         return (
           <Link
