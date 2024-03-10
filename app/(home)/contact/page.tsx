@@ -80,7 +80,7 @@ const ContactPage = () => {
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel
-                      className={`${lusitana.className} text-sky-500 text-3xl`}
+                      className={`${lusitana.className} text-sky-500 text-3xl ml-5`}
                     >
                       Phone
                     </FormLabel>
