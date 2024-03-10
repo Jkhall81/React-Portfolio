@@ -18,7 +18,7 @@ const AboutPage = () => {
 
       <div className="relative flex flex-col h-screen w-full overflow-hidden z-10">
         <div className="flex flex-row h-full">
-          <div className="flex-1 flex justify-center items-center text-white">
+          <div className="hidden sm:block flex-1 flex justify-center items-center text-white">
             {/* add some design stuff later?  I could have used two flex rows wrapped in a flex col and used justify end and start to do this.  But I like this better for some reason. */}
           </div>
           <motion.div
@@ -55,7 +55,7 @@ const AboutPage = () => {
               and playing Clash Royale during coding breaks.
             </p>
           </motion.div>
-          <div className="flex-1 flex justify-center items-center text-white">
+          <div className="hidden sm:block flex-1 flex justify-center items-center text-white">
             {/* box four */}
           </div>
         </div>
