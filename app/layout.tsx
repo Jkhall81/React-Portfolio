@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     default: "Jason Hall - Software Engineer",
     template: "Jason Hall - %s",
   },
-  description: "Web Development Portfolio Website of Jason Hall",
+  description: "Web Development Portfolio - Jason Hall",
   twitter: {
     card: "summary_large_image",
   },
