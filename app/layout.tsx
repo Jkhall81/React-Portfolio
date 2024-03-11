@@ -10,7 +10,8 @@ export const metadata: Metadata = {
     default: "Jason Hall - Software Engineer",
     template: "Jason Hall - %s",
   },
-  description: "Web Development Portfolio - Jason Hall",
+  description:
+    "Web Development Portfolio - Jason Hall.  Web developer specializing in React, Next.js, and creating modern, responsive interfaces using Tailwind CSS and Shadcn-UI.  Proficient in TypeScript, I can integrate backend solutions in Python using Django or Flask.  I have experience using Zod, SQL databases, and Git for version control.",
   twitter: {
     card: "summary_large_image",
   },
