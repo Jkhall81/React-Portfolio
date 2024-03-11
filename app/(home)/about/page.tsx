@@ -1,4 +1,4 @@
-import { AboutUseClient } from "@/components/AboutUseClient";
+import { AboutUseClient } from "@/components/useClient/AboutUseClient";
 import Image from "next/image";
 import { Metadata } from "next";
 
