@@ -6,6 +6,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  verification: {
+    google: "Nn6ND0D7aoqBkuycTbJgWlE3xZ9toZcSKItebG9aNKM",
+  },
   title: {
     default: "Jason Hall - Software Engineer - Fullstack Engineer",
     template: "Jason Hall - %s",
