@@ -38,13 +38,14 @@ export const AboutUseClient = () => {
             className={`${lusitana.className} flex-1 flex justify-center items-center text-white text-xl sm:text-3xl p-4 sm:ml-[5rem]`}
           >
             <p>
-              As a Full Stack Developer, I specialize in Next.js, React,
-              TypeScript / JavaScript, Python (Django, Flask), and the many
-              flavors of SQL! I am a graduate of the Masterschool Software
-              Engineering Bootcamp, and I hold a BA in Anthropology with a minor
-              in Mandarin from Iowa State University. Currently seeking Software
-              Engineering job opportunities, I enjoy weight-lighting, learning,
-              and playing Clash Royale during coding breaks.
+              As a Full Stack Developer, I specialize in React, Next.js, React
+              Native, TypeScript / JavaScript, Python (Django, Flask), and the
+              many flavors of SQL! I am a graduate of the Masterschool Software
+              Engineering Bootcamp. I hold a BA in Anthropology with a minor in
+              Mandarin from Iowa State University, and an MBA from Texas Tech
+              University. Currently seeking Software Engineering job
+              opportunities, I enjoy weight-lighting, learning, and playing
+              Clash Royale during coding breaks.
             </p>
           </motion.div>
           <div className="hidden flex-1 sm:flex justify-center items-center text-white">
