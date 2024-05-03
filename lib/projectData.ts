@@ -16,14 +16,6 @@ export const projectData = [
     direction: "left",
   },
   {
-    title: "E Commer Page",
-    textColor: "text-white",
-    image: "/projects/Ecommerce.jpg",
-    link1: "https://junk-store.vercel.app/",
-    link2: "https://github.com/Jkhall81/Junk-Store",
-    direction: "right",
-  },
-  {
     title: "Fu Donk",
     textColor: "#000000",
     image: "/projects/fudonk.jpg",
@@ -38,13 +30,5 @@ export const projectData = [
     link1: "https://hooptievana.vercel.app/",
     link2: "https://github.com/Jkhall81/Hooptievana",
     direction: "right",
-  },
-  {
-    title: "Wow Library",
-    textColor: "text-white",
-    image: "/projects/WowL.jpeg",
-    link1: "https://wow-library.onrender.com/",
-    link2: "https://github.com/Jkhall81/Wow-Library",
-    direction: "left",
   },
 ];
