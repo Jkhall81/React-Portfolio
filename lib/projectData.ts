@@ -1,5 +1,13 @@
 export const projectData = [
   {
+    title: "U-Well Healt",
+    textColor: "text-white",
+    image: "/projects/u-well.png",
+    link1: "https://u-well.vercel.app/",
+    link2: "https://github.com/Jkhall81/u-well",
+    direction: "left",
+  },
+  {
     title: "Roach Hotel Booking",
     textColor: "text-white",
     image: "/projects/RoachHotelBooking.jpg",
