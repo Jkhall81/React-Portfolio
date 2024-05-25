@@ -1,6 +1,6 @@
 export const projectData = [
   {
-    title: "U-Well Healt",
+    title: "U-Well Health",
     textColor: "text-white",
     image: "/projects/u-well.png",
     link1: "https://u-well.vercel.app/",
@@ -9,7 +9,7 @@ export const projectData = [
   },
   {
     title: "Roach Hotel Booking",
-    textColor: "text-white",
+    textColor: "text-black",
     image: "/projects/RoachHotelBooking.jpg",
     link1: "https://roach-hotel-booking.vercel.app/",
     link2: "https://github.com/Jkhall81/Roach-Hotel-Booking",
