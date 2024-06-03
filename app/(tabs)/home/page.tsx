@@ -7,7 +7,7 @@ import { useState } from "react";
 import { useIntroStore } from "@/store/store";
 
 export default function Home() {
-  const [showVideo, setShowVideo] = useState("null");
+  const [showVideo, setShowVideo] = useState("");
   const [blurClass, setBlurClass] = useState("");
   const [welcome, setWelcome] = useState("");
   const introMovie = useIntroStore((state) => state.introMovie);
