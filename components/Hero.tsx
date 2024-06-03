@@ -150,13 +150,6 @@ export const Hero = () => {
                 seamless and <span className="text-violet-600"> robust</span>{" "}
                 web development process from start to finish.
               </motion.p>
-              <Image
-                src="/images/wires.png"
-                alt="thin colored lines"
-                height={650}
-                width={650}
-                className="hidden 3xl:flex absolute pl-[2vw] mt-[4vh]"
-              />
             </div>
           </div>
         </div>
