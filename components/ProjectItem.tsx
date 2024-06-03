@@ -58,7 +58,7 @@ export const ProjectItem = ({
             className={`${lusitana.className} text-xl font-bold`}
             href={link2}
           >
-            <MagicButton title="Github Code" classNames="w-[190px]" />
+            <MagicButton title="Github Code" classNames="w-[220px]" />
           </Link>
         </div>
       </div>

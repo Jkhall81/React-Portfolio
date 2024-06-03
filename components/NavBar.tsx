@@ -31,7 +31,7 @@ export const NavBar = () => {
         {navLinks.map((link, index) => (
           <Link
             className={cn(
-              "hover:text-purple-600 hover:scale-110",
+              "hover:text-purple-600 text-2xl hover:scale-110",
               pathname === link.href ? "text-purple-600" : ""
             )}
             href={link.href}
