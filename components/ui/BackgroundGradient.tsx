@@ -19,7 +19,7 @@ export const BackgroundGradient = ({
   useEffect(() => {
     setTimeout(() => {
       setIsVisible("");
-    }, 100);
+    }, 300);
   }, []);
   return (
     <div
