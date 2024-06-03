@@ -18,34 +18,30 @@ const IntroVideo = ({
 }: Props) => {
   useEffect(() => {
     const timer1 = setTimeout(() => {
-      setShowVideo("");
-    }, 200);
-
-    const timer2 = setTimeout(() => {
       setBlurClass("blur-sm");
     }, 5000);
 
-    const timer3 = setTimeout(() => {
+    const timer2 = setTimeout(() => {
       setBlurClass("blur-md");
     }, 5100);
 
-    const timer4 = setTimeout(() => {
+    const timer3 = setTimeout(() => {
       setBlurClass("blur-lg");
     }, 5200);
 
-    const timer5 = setTimeout(() => {
+    const timer4 = setTimeout(() => {
       setBlurClass("blur-xl");
     }, 5300);
 
-    const timer6 = setTimeout(() => {
+    const timer5 = setTimeout(() => {
       setBlurClass("blur-2xl");
     }, 5400);
 
-    const timer7 = setTimeout(() => {
+    const timer6 = setTimeout(() => {
       setBlurClass("blur-3xl");
     }, 5500);
 
-    const timer8 = setTimeout(() => {
+    const timer7 = setTimeout(() => {
       setShowVideo("hidden");
     }, 5600);
 
@@ -57,7 +53,6 @@ const IntroVideo = ({
       clearTimeout(timer5);
       clearTimeout(timer6);
       clearTimeout(timer7);
-      clearTimeout(timer8);
     };
   }, []);
   return (
