@@ -8,3 +8,7 @@
 .project-group:hover {
   display: block;
 }
+
+.contact-font {
+  @apply bg-gradient-to-br from-purple-600 to-red-500 bg-clip-text text-transparent;
+}

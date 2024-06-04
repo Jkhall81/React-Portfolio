@@ -21,7 +21,7 @@ export const ContactForm = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
   });
-  const titleStyles = "text-purple-500 font-semibold text-3xl";
+  const titleStyles = "contact-font font-semibold text-3xl";
   return (
     <>
       <Form {...form}>

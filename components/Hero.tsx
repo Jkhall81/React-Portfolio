@@ -100,7 +100,7 @@ export const Hero = () => {
                   alt="Kanagawa Wave"
                   height={950}
                   width={950}
-                  className="rounded-3xl ms-1"
+                  className="rounded-3xl ms-[1/2px]"
                 />
               </BackgroundGradient>
             </motion.div>
@@ -121,8 +121,8 @@ export const Hero = () => {
               variants={fadeIn("right", 0.6)}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: false, amount: 0.4 }}
-              className="flex justify-center mt-10"
+              viewport={{ once: true, amount: 0.4 }}
+              className="flex justify-center mt-10 mb-20"
             >
               <Link href="/my-tech-stack">
                 <LitButton title="Learn More" classNames="w-[10vw] text-lg" />

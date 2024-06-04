@@ -57,7 +57,7 @@ const IntroVideo = ({
   }, []);
   return (
     <div
-      className={`${blurClass} ${showVideo} flex h-full min-h-screen items-center justify-center`}
+      className={`${blurClass} ${showVideo} mx-auto flex h-full max-w-[80vw] min-h-screen items-center justify-center`}
     >
       <BackgroundGradient className="rounded-[22px] aboslute inset-0 dark:bg-zinc-900">
         <video className="rounded-2xl" autoPlay loop muted src="/intro.mp4" />
