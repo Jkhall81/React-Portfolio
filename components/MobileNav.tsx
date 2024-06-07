@@ -64,7 +64,12 @@ export const MobileNav = () => {
           <div className="flex flex-col items-center justify-center">
             {navLinks.map((link, index) => {
               return (
-                <Link onClick={handleClick} className="py-4" href={link.href}>
+                <Link
+                  key={index}
+                  onClick={handleClick}
+                  className="py-4"
+                  href={link.href}
+                >
                   <span className="text-4xl font-semibold web-master">
                     {link.name}
                   </span>

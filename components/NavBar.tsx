@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 
 export const NavBar = () => {
   const navVisible = useNavStore((state) => state.navVisible);
+  console.log("store state", navVisible);
   const navLinks = [
     { name: "Home", href: "/home" },
     { name: "About Me", href: "/about-me" },
@@ -20,8 +21,8 @@ export const NavBar = () => {
   return (
     <nav
       className={cn(
-        "absolute z-[40] top-0 h-[70px] hidden bg-transparent w-full xl:flex",
-        `${navVisible ? "" : "hidden"}`
+        "absolute z-[40] top-0 h-[70px] hidden bg-transparent w-full",
+        `${navVisible ? "xl:flex" : "hidden"}`
       )}
     >
       <div className="w-[33vw]"></div>
