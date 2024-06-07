@@ -1,6 +1,6 @@
-1. make everything mobile responsive for smallest screens
+//1. make everything mobile responsive for smallest screens
 
-2. mobile nav
+//2. mobile nav
 
 3. footer
 
