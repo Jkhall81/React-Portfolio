@@ -33,7 +33,7 @@ export const Hero = () => {
 
   return (
     <main className="h-full min-h-screen">
-      <div className="h-full">
+      <div className="h-full w-full">
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
           fill="white"
@@ -125,18 +125,21 @@ export const Hero = () => {
               className="flex justify-center mt-10 mb-20"
             >
               <Link href="/my-tech-stack">
-                <LitButton title="Learn More" classNames="w-[10vw] text-lg" />
+                <LitButton
+                  title="Learn More"
+                  classNames="w=[200px] 2xl:w-[10vw] text-lg"
+                />
               </Link>
               <Link href="/contact-me">
                 <MagicButton
                   title="Contact Me"
-                  classNames="ml-8 w-[10vw] text-lg"
+                  classNames="ml-8 w-[200px] xl:w-[10vw] text-lg"
                 />
               </Link>
             </motion.div>
           </div>
           <div className="flex flex-col items-center 3xl:mx-[3vw] 3xl:w-[15vw] h-full">
-            <div className="3xl:w-[17vw] pb-20 w-[950px]">
+            <div className="3xl:w-[17vw] pb-20 2xl:w-[950px]">
               <motion.p
                 variants={fadeIn("up", 0.6)}
                 initial="hidden"

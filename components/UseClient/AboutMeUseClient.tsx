@@ -40,7 +40,7 @@ export const AboutMeUseClient = () => {
             About Me
           </h1>
           <div className="2xl:flex">
-            <div className="w-[43vw] mb-10 mx-auto flex justify-center">
+            <div className="2xl:w-[43vw] mb-10 mx-auto flex justify-center">
               {/* Image Container */}
               <Image
                 src="/images/masterSchool.png"
@@ -71,7 +71,7 @@ export const AboutMeUseClient = () => {
           {/* Text Container 2 */}
           <div>
             <p
-              className={`text-white prose text-3xl mt-20 mb-20 ${roboto.className}`}
+              className={`text-white prose text-3xl px-4 mt-20 mb-20 ${roboto.className}`}
             >
               Currently, I am employed at an{" "}
               <span className="text-blue-600">Apple</span> data center as a
@@ -89,7 +89,7 @@ export const AboutMeUseClient = () => {
           </div>
           <div className="2xl:flex">
             <div
-              className={`text-white prose text-3xl 2xl:w-[66vw] mt-8 mb-20 flex flex-col ${roboto.className}`}
+              className={`text-white prose px-4 text-3xl 2xl:w-[66vw] mt-8 mb-20 flex flex-col ${roboto.className}`}
             >
               <p>
                 I am a passionate Full Stack Engineer actively seeking a

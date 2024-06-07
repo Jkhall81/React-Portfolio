@@ -58,7 +58,7 @@ const items = [
     header: null,
     className: "md:col-span-1",
     src: "/images/face3.png",
-    imageClassNames: "p-2 px-[30px] 4xl:px-[70px]",
+    imageClassNames: "p-2 px-[40px] 4xl:px-[70px]",
   },
   {
     title: "SQL",
@@ -66,6 +66,6 @@ const items = [
     header: null,
     className: "md:col-span-2",
     src: "/images/face4.png",
-    imageClassNames: "px-[100px] 4xl:px-[180px] py-2",
+    imageClassNames: "px-[120px] 4xl:px-[180px] py-2",
   },
 ];

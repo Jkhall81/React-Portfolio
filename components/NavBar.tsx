@@ -20,7 +20,7 @@ export const NavBar = () => {
   return (
     <nav
       className={cn(
-        "absolute z-[40] top-0 h-[70px] bg-transparent w-full flex",
+        "absolute z-[40] top-0 h-[70px] hidden bg-transparent w-full xl:flex",
         `${navVisible ? "" : "hidden"}`
       )}
     >

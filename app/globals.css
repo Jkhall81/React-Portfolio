@@ -12,3 +12,7 @@
 .contact-font {
   @apply bg-gradient-to-br from-purple-600 to-red-500 bg-clip-text text-transparent;
 }
+
+.mobile-nav {
+  @apply bg-gradient-to-l from-purple-600 via-purple-900 to-white bg-clip-text text-transparent;
+}

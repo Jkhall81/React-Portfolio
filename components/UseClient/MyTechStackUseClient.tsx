@@ -34,7 +34,7 @@ export const MyTechStackUseClient = () => {
             My <span className="web-master">Technical</span> Arsenal
           </h1>
         </div>
-        <div className="3xl:flex">
+        <div className="4xl:flex">
           <div className="flex w-full 2xl:w-[43vw] pr-[10px] items-center">
             {/* 1 Image */}
 
@@ -89,12 +89,12 @@ export const MyTechStackUseClient = () => {
           </div>
 
           {/* Bento Boxie Box */}
-          <div className="w-full 2xl:w-[36vw] xl:ml-[5vw] mx-auto flex flex-col items-center">
+          <div className="w-full 3xl:w-[36vw] xl:ml-[5vw] mx-auto flex flex-col items-center">
             <h2 className="text-white text-5xl mt-10 font-semibold">
               Languages
             </h2>
             <div
-              className={`text-white text-4xl pb-4 mt-20 space-y-4 ${roboto.className}`}
+              className={`text-white w-full text-4xl pb-4 mt-20 space-y-4 ${roboto.className}`}
             >
               <TwoColumnGrid />
             </div>
@@ -132,7 +132,7 @@ export const MyTechStackUseClient = () => {
           >
             Deployment
           </h2>
-          <p className="prose text-white text-3xl mb-20">
+          <p className="prose text-white px-4 text-3xl mb-20">
             As a full-stack developer, I specialize in deploying robust
             applications to various platforms, including AWS, Vercel, Netlify,
             Linode, Render, and more. With extensive experience in both
