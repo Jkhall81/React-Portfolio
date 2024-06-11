@@ -1,11 +1,13 @@
 "use client";
 
-import { useNavStore } from "@/store/store";
-import { useIntroStore } from "@/store/store";
+import { useNavStore, useIntroStore, useFooterStore } from "@/store/store";
 import { useEffect } from "react";
 
 const SupportPage = () => {
   const setNavVisibleTrue = useNavStore((state) => state.setNavVisibleTrue);
+  const setFooterVisibleTrue = useFooterStore(
+    (state) => state.setFooterVisibleTrue
+  );
   const setIntroMovieFalse = useIntroStore((state) => state.setIntroMovieFalse);
   const setWelcomeScreenFalse = useIntroStore(
     (state) => state.setWelcomeScreenFalse
@@ -13,6 +15,7 @@ const SupportPage = () => {
 
   useEffect(() => {
     setNavVisibleTrue();
+    setFooterVisibleTrue();
     setIntroMovieFalse();
     setWelcomeScreenFalse();
   }, [setNavVisibleTrue, setIntroMovieFalse, setWelcomeScreenFalse]);
