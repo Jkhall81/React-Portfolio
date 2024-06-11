@@ -2,11 +2,11 @@
 
 //2. mobile nav
 
-3. footer
+//3. footer
 
 4. pricing plan page
 
-5.  link to pricing plan page in the foot and button on hero section
+5. link to pricing plan page in the foot and button on hero section
 
 6. welcome page design improvements
 
@@ -14,6 +14,6 @@
 
 8. Add more design wise to the contact me page.
 
-9. Change favicon
+//9. Change favicon
 
 10. Add other metadata shit.

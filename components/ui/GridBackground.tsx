@@ -6,9 +6,9 @@ interface Props {
 
 const GridBackground = ({ children }: Props) => {
   return (
-    <div className="h-full w-full dark:bg-black bg-white dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-start justify-start">
+    <div className="h-full w-full dark:bg-black bg-white  dark:bg-grid-lime-500/[0.4] bg-grid-black/[0.2] relative">
       {/* Radial gradient for the container to give a faded look */}
-      <div className="absolute h-full pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]"></div>
       {children}
     </div>
   );
