@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { useNavStore, useIntroStore } from "@/store/store";
+import { useNavStore, useIntroStore, useFooterStore } from "@/store/store";
 import { HeroHighlight } from "@/components/ui/HeroHighlight";
 import { motion } from "framer-motion";
 import { projectData } from "@/utils/data/projectData";
@@ -10,6 +10,9 @@ import { ProjectItem } from "@/components/ProjectItem";
 
 export const ProjectsUseClient = () => {
   const setNavVisibleTrue = useNavStore((state) => state.setNavVisibleTrue);
+  const setFooterVisibleTrue = useFooterStore(
+    (state) => state.setFooterVisibleTrue
+  );
   const setWelcomeScreenFalse = useIntroStore(
     (state) => state.setWelcomeScreenFalse
   );
@@ -17,6 +20,7 @@ export const ProjectsUseClient = () => {
 
   useEffect(() => {
     setNavVisibleTrue();
+    setFooterVisibleTrue();
     setWelcomeScreenFalse();
     setIntroMovieFalse();
   }, [setNavVisibleTrue, setWelcomeScreenFalse, setIntroMovieFalse]);

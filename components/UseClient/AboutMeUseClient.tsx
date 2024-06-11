@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { useNavStore, useIntroStore } from "@/store/store";
+import { useNavStore, useIntroStore, useFooterStore } from "@/store/store";
 import { roboto } from "@/utils/fonts";
 import { bitter } from "@/utils/fonts";
 import Image from "next/image";
@@ -11,6 +11,9 @@ import { HeroHighlight } from "@/components/ui/HeroHighlight";
 
 export const AboutMeUseClient = () => {
   const setNavVisibleTrue = useNavStore((state) => state.setNavVisibleTrue);
+  const setFooterVisibleTrue = useFooterStore(
+    (state) => state.setFooterVisibleTrue
+  );
   const setWelcomeScreenFalse = useIntroStore(
     (state) => state.setWelcomeScreenFalse
   );
@@ -18,6 +21,7 @@ export const AboutMeUseClient = () => {
 
   useEffect(() => {
     setNavVisibleTrue();
+    setFooterVisibleTrue();
     setWelcomeScreenFalse();
     setIntroMovieFalse();
   }, [setNavVisibleTrue, setWelcomeScreenFalse, setIntroMovieFalse]);

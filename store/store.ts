@@ -1,5 +1,6 @@
 import { create } from "zustand";
 
+// Navbar
 interface NavStore {
   navVisible: boolean;
   setNavVisibleTrue: () => void;
@@ -12,6 +13,20 @@ export const useNavStore = create<NavStore>((set) => ({
   },
 }));
 
+// Footer
+interface FooterStore {
+  footerVisible: boolean;
+  setFooterVisibleTrue: () => void;
+}
+
+export const useFooterStore = create<FooterStore>((set) => ({
+  footerVisible: false,
+  setFooterVisibleTrue: () => {
+    set({ footerVisible: true });
+  },
+}));
+
+// Intro
 interface IntroStore {
   introMovie: boolean;
   setIntroMovieFalse: () => void;

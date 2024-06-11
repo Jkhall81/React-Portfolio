@@ -1,6 +1,6 @@
 "use client";
 
-import { useIntroStore, useNavStore } from "@/store/store";
+import { useIntroStore, useNavStore, useFooterStore } from "@/store/store";
 import { useEffect } from "react";
 import { HeroHighlight } from "@/components/ui/HeroHighlight";
 import { bitter } from "@/utils/fonts";
@@ -14,6 +14,9 @@ import { BackEndIcons } from "@/components/BackEndIcons";
 
 export const MyTechStackUseClient = () => {
   const setNavVisibleTrue = useNavStore((state) => state.setNavVisibleTrue);
+  const setFooterVisibleTrue = useFooterStore(
+    (state) => state.setFooterVisibleTrue
+  );
   const setWelcomeScreenFalse = useIntroStore(
     (state) => state.setWelcomeScreenFalse
   );
@@ -21,6 +24,7 @@ export const MyTechStackUseClient = () => {
 
   useEffect(() => {
     setNavVisibleTrue();
+    setFooterVisibleTrue();
     setWelcomeScreenFalse();
     setIntroMovieFalse();
   }, [setNavVisibleTrue, setWelcomeScreenFalse, setIntroMovieFalse]);

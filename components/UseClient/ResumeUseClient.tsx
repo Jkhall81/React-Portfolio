@@ -1,12 +1,15 @@
 "use client";
 
-import { useIntroStore, useNavStore } from "@/store/store";
+import { useIntroStore, useNavStore, useFooterStore } from "@/store/store";
 import { useEffect } from "react";
 
 const pdfSrc = "/Jason-Hall-Resume-May-2024.pdf";
 
 export const ResumeUseClient = () => {
   const setNavVisibleTrue = useNavStore((state) => state.setNavVisibleTrue);
+  const setFooterVisibleTrue = useFooterStore(
+    (state) => state.setFooterVisibleTrue
+  );
   const setWelcomeScreenFalse = useIntroStore(
     (state) => state.setWelcomeScreenFalse
   );
@@ -14,6 +17,7 @@ export const ResumeUseClient = () => {
 
   useEffect(() => {
     setNavVisibleTrue();
+    setFooterVisibleTrue();
     setWelcomeScreenFalse();
     setIntroMovieFalse();
   }, [setNavVisibleTrue, setWelcomeScreenFalse, setIntroMovieFalse]);

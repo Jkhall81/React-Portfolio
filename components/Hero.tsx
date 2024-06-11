@@ -2,8 +2,7 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
-import { useNavStore } from "@/store/store";
-import { useIntroStore } from "@/store/store";
+import { useNavStore, useIntroStore, useFooterStore } from "@/store/store";
 import { BackgroundGradient } from "./ui/BackgroundGradient";
 import { LitButton } from "./ui/LitButton";
 import { MagicButton } from "./ui/MagicButton";
@@ -19,6 +18,9 @@ import SocialLinks from "./SocialLinks";
 
 export const Hero = () => {
   const setNavVisibleTrue = useNavStore((state) => state.setNavVisibleTrue);
+  const setFooterVisibleTrue = useFooterStore(
+    (state) => state.setFooterVisibleTrue
+  );
   const setIntroMovieFalse = useIntroStore((state) => state.setIntroMovieFalse);
   const setWelcomeScreenFalse = useIntroStore(
     (state) => state.setWelcomeScreenFalse
@@ -27,6 +29,7 @@ export const Hero = () => {
 
   useEffect(() => {
     setNavVisibleTrue();
+    setFooterVisibleTrue();
     setIntroMovieFalse();
     setWelcomeScreenFalse();
   }, [setNavVisibleTrue, setIntroMovieFalse, setWelcomeScreenFalse]);

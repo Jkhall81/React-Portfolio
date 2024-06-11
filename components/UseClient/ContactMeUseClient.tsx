@@ -3,10 +3,13 @@
 import { useEffect } from "react";
 import { ContactForm } from "@/components/ContactForm";
 import { HeroHighlight } from "@/components/ui/HeroHighlight";
-import { useIntroStore, useNavStore } from "@/store/store";
+import { useIntroStore, useNavStore, useFooterStore } from "@/store/store";
 
 export const ContactMeUseClient = () => {
   const setNavVisibleTrue = useNavStore((state) => state.setNavVisibleTrue);
+  const setFooterVisibleTrue = useFooterStore(
+    (state) => state.setFooterVisibleTrue
+  );
   const setWelcomeScreenFalse = useIntroStore(
     (state) => state.setWelcomeScreenFalse
   );
@@ -14,6 +17,7 @@ export const ContactMeUseClient = () => {
 
   useEffect(() => {
     setNavVisibleTrue();
+    setFooterVisibleTrue();
     setWelcomeScreenFalse();
     setIntroMovieFalse();
   }, [setNavVisibleTrue, setWelcomeScreenFalse, setIntroMovieFalse]);

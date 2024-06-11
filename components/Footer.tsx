@@ -1,3 +1,7 @@
+"use client";
+
+import { useFooterStore } from "@/store/store";
+import { cn } from "@/utils/cn";
 import GridBackground from "./ui/GridBackground";
 import Link from "next/link";
 
@@ -8,8 +12,9 @@ const footerLinks = [
 ];
 
 const Footer = () => {
+  const footerVisible = useFooterStore((state) => state.footerVisible);
   return (
-    <div className="h-[200px]">
+    <div className={cn("h-[200px]", `${footerVisible ? "" : "hidden"}`)}>
       <GridBackground>
         <div className="flex w-full h-full">
           <div className="w-[50%]"></div>
