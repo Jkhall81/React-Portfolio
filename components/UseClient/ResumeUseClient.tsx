@@ -3,7 +3,7 @@
 import { useIntroStore, useNavStore, useFooterStore } from "@/store/store";
 import { useEffect } from "react";
 
-const pdfSrc = "/Jason-Hall-Resume-May-2024.pdf";
+const pdfSrc = "/Jason-Hall-Resume-June-2024.pdf";
 
 export const ResumeUseClient = () => {
   const setNavVisibleTrue = useNavStore((state) => state.setNavVisibleTrue);

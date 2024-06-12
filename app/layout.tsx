@@ -23,6 +23,7 @@ export default function RootLayout({
         <NavBar />
         <MobileNav />
         {children}
+        <div className="h-[40px] w-full bg-black" />
         <Footer />
       </body>
     </html>
