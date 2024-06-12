@@ -17,3 +17,9 @@
 //9. Change favicon
 
 10. Add other metadata shit.
+
+In addition to technical expertise, I prioritize clear communication, ensure projects are completed on schedule, offer reasonable pricing, and provide a comprehensive and client-focused web development service.
+
+Comprehensive Web Development Services: I specialize in building, designing, and deploying high-quality web applications tailored to meet your business needs. From initial concept to final deployment, I ensure a seamless process that brings your ideas to life.
+
+With expertise in delivering comprehensive web solutions, I can create user interfaces, manage databases, perform thorough testing, handle deployment, and develop APIs, ensuring a seamless and robust web development process from start to finish.
