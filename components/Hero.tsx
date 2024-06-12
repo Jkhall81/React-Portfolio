@@ -25,7 +25,6 @@ export const Hero = () => {
   const setWelcomeScreenFalse = useIntroStore(
     (state) => state.setWelcomeScreenFalse
   );
-  const words = "Full-Stack Engineer";
 
   useEffect(() => {
     setNavVisibleTrue();
@@ -52,52 +51,33 @@ export const Hero = () => {
       </div>
       <div className="3xl:flex h-full">
         <div className="flex flex-col min-w-[33vw] justify-center items-center">
-          <motion.h1
-            variants={fadeIn("top", 0.6)}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.4 }}
-            className="text-white text-7xl pb-6 mt-[300px]"
-          >
+          <h1 className="text-white text-7xl pb-6 mt-[300px]">
             <span className={`web-master font-extrabold ${bitter.className}`}>
               Jason Hall
             </span>
-          </motion.h1>
-          <div className="flex flex-col mx-20 items-center text-white">
-            <TextGenerateEffect
-              className={`pb-6 text-3xl ${rufina.className}`}
-              words={words}
-            />
+          </h1>
+          <h2 className="text-white text-5xl pt-[30px]">Full-Stack Engineer</h2>
+          <div className="flex flex-col w-full mx-20 items-center text-white">
             <p className="text-4xl">
-              Make your <span className="text-purple-500 text-4xl">ideas</span>{" "}
-              a digital reality.
+              <span className="text-purple-500 text-4xl"></span>{" "}
             </p>
 
-            <motion.p
-              variants={fadeIn("left", 0.6)}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: false, amount: 0.4 }}
+            <p
               className={`prose mt-8 text-white text-2xl ${roboto.className}`}
-            >
-              In addition to technical expertise, I prioritize clear
-              <span className="text-sky-600"> communication</span>, ensure
-              projects are completed on schedule, offer reasonable pricing, and
-              provide a comprehensive and client-focused web development
-              service.
-            </motion.p>
+            ></p>
+
             <SocialLinks size={40} classNames="mt-10" />
           </div>
         </div>
         <div className="pt-[20vh] flex flex-col 3xl:flex 3xl:items-start 3xl:min-w-[66vw]">
-          <div className="max-w-[60vw] mx-auto">
+          <div className="max-w-[60vw] min-h-[78vh] mx-auto">
             <motion.div
-              variants={fadeIn("right", 0.6)}
+              variants={fadeIn("left", 0.6)}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: false, amount: 0.4 }}
+              viewport={{ once: true, amount: 0.4 }}
             >
-              <BackgroundGradient className="">
+              <BackgroundGradient>
                 <Image
                   src="/images/69561.jpg"
                   alt="Kanagawa Wave"
@@ -107,8 +87,7 @@ export const Hero = () => {
                 />
               </BackgroundGradient>
             </motion.div>
-
-            <div className="flex justify-center pt-[50px]">
+            {/* <div className="flex justify-center pt-[80px]">
               <Link href="/my-tech-stack">
                 <LitButton
                   title="Learn More"
@@ -121,7 +100,7 @@ export const Hero = () => {
                   classNames="ml-8 w-[200px] xl:w-[10vw] text-lg"
                 />
               </Link>
-            </div>
+            </div> */}
           </div>
           <div className="flex flex-col items-center 3xl:mx-[3vw] 3xl:w-[15vw] h-full"></div>
         </div>
