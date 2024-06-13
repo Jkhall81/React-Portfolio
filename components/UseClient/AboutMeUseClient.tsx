@@ -61,13 +61,13 @@ export const AboutMeUseClient = () => {
               >
                 I began my academic journey at{" "}
                 <span className="text-indigo-600">Iowa State University</span>,
-                where I earned a B.A. in Anthropology with a minor in Mandarin
-                in 2003. My passion for understanding diverse cultures and
-                languages shaped my early career path. To further enhance my
-                expertise, I pursued an MBA in Health Organization Management
-                from Texas Tech University, graduating in 2012. More recently, I
-                completed a Software Engineering Bootcamp at Master School in
-                2024, equipping myself with the technical skills necessary for
+                where I earned a B.A. in Anthropology with a minor in Mandarin.
+                My passion for understanding diverse cultures and languages lead
+                me to get a job teaching English in a Chinese university. To
+                further enhance my expertise, I pursued an MBA in Health
+                Organization Management from Texas Tech University. More
+                recently, I completed a Software Engineering Bootcamp at Master
+                School, equipping myself with the technical skills necessary for
                 the ever-evolving tech industry.
               </p>
             </div>
@@ -79,16 +79,16 @@ export const AboutMeUseClient = () => {
             >
               Currently, I am employed at an{" "}
               <span className="text-blue-600">Apple</span> data center as a
-              Logistics Technician, where I manage the intricate logistics of
-              data center operations. My professional journey has been diverse,
-              reflecting my adaptability and wide-ranging interests. I have
-              taught English at Chinese universities, providing me with
-              invaluable cross-cultural communication skills. Additionally, I
-              have hands-on experience in the construction industry, which has
-              honed my project management and teamwork abilities. Alongside
-              these roles, I have been a freelance web developer, where I have
-              successfully delivered various projects, showcasing my technical
-              prowess and problem-solving skills.
+              Logistics Technician, where I work with hardware and wiping
+              harddrives. My professional journey has been diverse, reflecting
+              my adaptability and wide-ranging interests. I have taught English
+              at Chinese universities, providing me with invaluable
+              cross-cultural communication skills. Additionally, I have hands-on
+              experience in the construction industry, which has honed my
+              project management and teamwork abilities. Alongside these roles,
+              I have been a freelance web developer, where I have successfully
+              delivered various projects, showcasing my technical prowess and
+              problem-solving skills.
             </p>
           </div>
           <div className="2xl:flex">

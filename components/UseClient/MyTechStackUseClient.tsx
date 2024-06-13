@@ -8,8 +8,6 @@ import { roboto } from "@/utils/fonts";
 import Image from "next/image";
 import { TwoColumnGrid } from "@/components/TwoColumnGrid";
 import { FrontEndIcons } from "@/components/FrontEndIcons";
-import { motion } from "framer-motion";
-import { fadeIn } from "@/utils/fadein";
 import { BackEndIcons } from "@/components/BackEndIcons";
 
 export const MyTechStackUseClient = () => {
@@ -35,7 +33,7 @@ export const MyTechStackUseClient = () => {
           <h1
             className={`text-white mt-20 mb-20 font-semibold text-6xl ${bitter.className}`}
           >
-            My <span className="web-master">Technical</span> Arsenal
+            My <span className="web-master">Tools</span>
           </h1>
         </div>
         <div className="4xl:flex">
@@ -43,52 +41,31 @@ export const MyTechStackUseClient = () => {
             {/* 1 Image */}
 
             <div className="mx-8 flex items-center">
-              <motion.div
-                variants={fadeIn("right", 0.6)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.4 }}
-              >
-                <Image
-                  src="/images/programming.png"
-                  alt="image of code"
-                  height={450}
-                  width={450}
-                  className="rounded-3xl rounded-tl-[80px]"
-                />
-              </motion.div>
+              <Image
+                src="/images/programming.png"
+                alt="image of code"
+                height={450}
+                width={450}
+                className="rounded-3xl rounded-tl-[80px]"
+              />
             </div>
             {/* 2 Images */}
 
             <div className="flex flex-col">
-              <motion.div
-                variants={fadeIn("up", 0.6)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.4 }}
-              >
-                <Image
-                  src="/images/programming2.png"
-                  alt="image of code"
-                  height={450}
-                  width={450}
-                  className="mb-8 rounded-3xl rounded-tr-[80px]"
-                />
-              </motion.div>
-              <motion.div
-                variants={fadeIn("down", 0.6)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.4 }}
-              >
-                <Image
-                  src="/images/programming3.png"
-                  alt="image of code"
-                  height={450}
-                  width={450}
-                  className="rounded-3xl rounded-br-[80px]"
-                />
-              </motion.div>
+              <Image
+                src="/images/programming2.png"
+                alt="image of code"
+                height={450}
+                width={450}
+                className="mb-8 rounded-3xl rounded-tr-[80px]"
+              />
+              <Image
+                src="/images/programming3.png"
+                alt="image of code"
+                height={450}
+                width={450}
+                className="rounded-3xl rounded-br-[80px]"
+              />
             </div>
           </div>
 
@@ -139,10 +116,10 @@ export const MyTechStackUseClient = () => {
           <p className="prose text-white px-4 text-3xl mb-20">
             As a full-stack developer, I specialize in deploying robust
             applications to various platforms, including AWS, Vercel, Netlify,
-            Linode, Render, and more. With extensive experience in both
-            front-end and back-end development, I excel at seamlessly
-            integrating user interfaces with APIs and databases. Let me help you
-            bring your ideas to life with scalable and efficient solutions.
+            Linode, Render, and more. With experience in both front-end and
+            back-end development, I excel at seamlessly integrating user
+            interfaces with APIs and databases. Let me help you bring your ideas
+            to life with scalable and efficient solutions.
           </p>
         </div>
       </div>

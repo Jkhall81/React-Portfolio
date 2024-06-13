@@ -50,27 +50,31 @@ export const Hero = () => {
         />
       </div>
       <div className="3xl:flex h-full">
-        <div className="flex flex-col min-w-[33vw] justify-center items-center">
-          <h1 className="text-white text-7xl pb-6 mt-[300px]">
-            <span className={`web-master font-extrabold ${bitter.className}`}>
-              Jason Hall
-            </span>
-          </h1>
-          <h2 className="text-white text-5xl pt-[30px]">Full-Stack Engineer</h2>
-          <div className="flex flex-col w-full mx-20 items-center text-white">
-            <p className="text-4xl">
-              <span className="text-purple-500 text-4xl"></span>{" "}
-            </p>
+        <div className="pt-[250px]">
+          <div className="flex flex-col min-w-[33vw] justify-center items-center">
+            <h1 className="text-white text-7xl pb-6 mt-[300px]">
+              <span className={`web-master font-extrabold ${bitter.className}`}>
+                Jason Hall
+              </span>
+            </h1>
+            <h2 className="text-white text-5xl pt-[30px]">
+              Full-Stack Engineer
+            </h2>
+            <div className="flex flex-col w-full mx-20 items-center text-white">
+              <p className="text-4xl">
+                <span className="text-purple-500 text-4xl"></span>{" "}
+              </p>
 
-            <p
-              className={`prose mt-8 text-white text-2xl ${roboto.className}`}
-            ></p>
+              <p
+                className={`prose mt-8 text-white text-2xl ${roboto.className}`}
+              ></p>
 
-            <SocialLinks size={40} classNames="mt-10" />
+              <SocialLinks size={40} classNames="mt-10" />
+            </div>
           </div>
         </div>
         <div className="pt-[20vh] flex flex-col 3xl:flex 3xl:items-start 3xl:min-w-[66vw]">
-          <div className="max-w-[60vw] min-h-[78vh] mx-auto">
+          <div className="max-w-[60vw] min-h-[78vh] mx-auto pb-[200px]">
             <motion.div
               variants={fadeIn("left", 0.6)}
               initial="hidden"
@@ -102,7 +106,7 @@ export const Hero = () => {
               </Link>
             </div> */}
           </div>
-          <div className="flex flex-col items-center 3xl:mx-[3vw] 3xl:w-[15vw] h-full"></div>
+          <div className="flex flex-col items-center 3xl:mx-[3vw] 3xl:w-[15vw]"></div>
         </div>
       </div>
     </main>

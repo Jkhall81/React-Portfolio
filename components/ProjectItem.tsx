@@ -36,7 +36,7 @@ export const ProjectItem = ({
         src={image}
         fill
         alt="project image"
-        className="rounded-lg object-cover"
+        className="rounded-2xl object-cover"
       />
       <div
         className={`absolute min-w-[200px] sm:min-w-[400px] ${
