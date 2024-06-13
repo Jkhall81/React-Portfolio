@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
-import { useNavStore, useIntroStore, useFooterStore } from "@/store/store";
+import { usePageSetup } from "@/hooks/usePageSetup";
 import { HeroHighlight } from "@/components/ui/HeroHighlight";
 import { motion } from "framer-motion";
 import { projectData } from "@/utils/data/projectData";
@@ -9,21 +8,7 @@ import { fadeIn } from "@/utils/fadein";
 import { ProjectItem } from "@/components/ProjectItem";
 
 export const ProjectsUseClient = () => {
-  const setNavVisibleTrue = useNavStore((state) => state.setNavVisibleTrue);
-  const setFooterVisibleTrue = useFooterStore(
-    (state) => state.setFooterVisibleTrue
-  );
-  const setWelcomeScreenFalse = useIntroStore(
-    (state) => state.setWelcomeScreenFalse
-  );
-  const setIntroMovieFalse = useIntroStore((state) => state.setIntroMovieFalse);
-
-  useEffect(() => {
-    setNavVisibleTrue();
-    setFooterVisibleTrue();
-    setWelcomeScreenFalse();
-    setIntroMovieFalse();
-  }, [setNavVisibleTrue, setWelcomeScreenFalse, setIntroMovieFalse]);
+  usePageSetup();
   return (
     <HeroHighlight containerClassName="h-full">
       <h1 className="text-white text-5xl font-bold text-center p-2 mt-[200px]">
@@ -41,8 +26,7 @@ export const ProjectsUseClient = () => {
           >
             <ProjectItem
               image={item.image}
-              link1={item.link1}
-              link2={item.link2}
+              href={item.href}
               title={item.title}
               textColor={item.textColor}
               direction={item.direction}

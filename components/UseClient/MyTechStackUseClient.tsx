@@ -1,7 +1,6 @@
 "use client";
 
-import { useIntroStore, useNavStore, useFooterStore } from "@/store/store";
-import { useEffect } from "react";
+import { usePageSetup } from "@/hooks/usePageSetup";
 import { HeroHighlight } from "@/components/ui/HeroHighlight";
 import { bitter } from "@/utils/fonts";
 import { roboto } from "@/utils/fonts";
@@ -11,21 +10,7 @@ import { FrontEndIcons } from "@/components/FrontEndIcons";
 import { BackEndIcons } from "@/components/BackEndIcons";
 
 export const MyTechStackUseClient = () => {
-  const setNavVisibleTrue = useNavStore((state) => state.setNavVisibleTrue);
-  const setFooterVisibleTrue = useFooterStore(
-    (state) => state.setFooterVisibleTrue
-  );
-  const setWelcomeScreenFalse = useIntroStore(
-    (state) => state.setWelcomeScreenFalse
-  );
-  const setIntroMovieFalse = useIntroStore((state) => state.setIntroMovieFalse);
-
-  useEffect(() => {
-    setNavVisibleTrue();
-    setFooterVisibleTrue();
-    setWelcomeScreenFalse();
-    setIntroMovieFalse();
-  }, [setNavVisibleTrue, setWelcomeScreenFalse, setIntroMovieFalse]);
+  usePageSetup();
   return (
     <HeroHighlight containerClassName="h-full">
       <div className="min-h-screen w-full flex flex-col items-center">
@@ -114,12 +99,10 @@ export const MyTechStackUseClient = () => {
             Deployment
           </h2>
           <p className="prose text-white px-4 text-3xl mb-20">
-            As a full-stack developer, I specialize in deploying robust
-            applications to various platforms, including AWS, Vercel, Netlify,
-            Linode, Render, and more. With experience in both front-end and
-            back-end development, I excel at seamlessly integrating user
-            interfaces with APIs and databases. Let me help you bring your ideas
-            to life with scalable and efficient solutions.
+            As a full-stack developer, I can deploy applications to platforms
+            like AWS, Vercel, Netlify, Linode, and Render. I can create
+            multi-container Docker environments and have experience integrating
+            user interfaces with APIs and databases.
           </p>
         </div>
       </div>

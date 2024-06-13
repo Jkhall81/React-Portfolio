@@ -1,37 +1,17 @@
 "use client";
 
-import { useEffect } from "react";
-import Link from "next/link";
-import { useNavStore, useIntroStore, useFooterStore } from "@/store/store";
+import { usePageSetup } from "@/hooks/usePageSetup";
 import { BackgroundGradient } from "./ui/BackgroundGradient";
-import { LitButton } from "./ui/LitButton";
-import { MagicButton } from "./ui/MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/fadein";
 import Image from "next/image";
-import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { bitter } from "@/utils/fonts";
-import { rufina } from "@/utils/fonts";
 import { roboto } from "@/utils/fonts";
 import SocialLinks from "./SocialLinks";
 
 export const Hero = () => {
-  const setNavVisibleTrue = useNavStore((state) => state.setNavVisibleTrue);
-  const setFooterVisibleTrue = useFooterStore(
-    (state) => state.setFooterVisibleTrue
-  );
-  const setIntroMovieFalse = useIntroStore((state) => state.setIntroMovieFalse);
-  const setWelcomeScreenFalse = useIntroStore(
-    (state) => state.setWelcomeScreenFalse
-  );
-
-  useEffect(() => {
-    setNavVisibleTrue();
-    setFooterVisibleTrue();
-    setIntroMovieFalse();
-    setWelcomeScreenFalse();
-  }, [setNavVisibleTrue, setIntroMovieFalse, setWelcomeScreenFalse]);
+  usePageSetup();
 
   return (
     <main className="h-full min-h-screen">

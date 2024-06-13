@@ -3,15 +3,12 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { lusitana } from "@/utils/fonts";
 import { roboto } from "@/utils/fonts";
 import { LitButton } from "./ui/LitButton";
-import { MagicButton } from "./ui/MagicButton";
 
 interface ProjectItemProps {
   image: string;
-  link1: string;
-  link2: string;
+  href: string;
   title: string;
   textColor: string;
   direction: string;
@@ -19,8 +16,7 @@ interface ProjectItemProps {
 
 export const ProjectItem = ({
   image,
-  link1,
-  link2,
+  href,
   title,
   textColor,
 }: ProjectItemProps) => {
@@ -49,16 +45,8 @@ export const ProjectItem = ({
           {title}
         </h1>
         <div className="flex flex-col justify-center items-center ">
-          <Link target="_blank" className={`mb-4 text-xl`} href={link1}>
-            <LitButton title="Visit This Project" classNames="" />
-          </Link>
-
-          <Link
-            target="_blank"
-            className={`${lusitana.className} text-xl font-bold`}
-            href={link2}
-          >
-            <MagicButton title="Github Code" classNames="w-[220px]" />
+          <Link className={`mb-4 text-xl`} href={href}>
+            <LitButton title="Take the tour" classNames="" />
           </Link>
         </div>
       </div>

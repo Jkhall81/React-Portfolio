@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
-import { useNavStore, useIntroStore, useFooterStore } from "@/store/store";
+import { usePageSetup } from "@/hooks/usePageSetup";
 import { roboto } from "@/utils/fonts";
 import { bitter } from "@/utils/fonts";
 import Image from "next/image";
@@ -10,21 +9,7 @@ import Link from "next/link";
 import { HeroHighlight } from "@/components/ui/HeroHighlight";
 
 export const AboutMeUseClient = () => {
-  const setNavVisibleTrue = useNavStore((state) => state.setNavVisibleTrue);
-  const setFooterVisibleTrue = useFooterStore(
-    (state) => state.setFooterVisibleTrue
-  );
-  const setWelcomeScreenFalse = useIntroStore(
-    (state) => state.setWelcomeScreenFalse
-  );
-  const setIntroMovieFalse = useIntroStore((state) => state.setIntroMovieFalse);
-
-  useEffect(() => {
-    setNavVisibleTrue();
-    setFooterVisibleTrue();
-    setWelcomeScreenFalse();
-    setIntroMovieFalse();
-  }, [setNavVisibleTrue, setWelcomeScreenFalse, setIntroMovieFalse]);
+  usePageSetup();
   return (
     <HeroHighlight containerClassName="h-full">
       <div className="flex flex-col w-full">
@@ -59,16 +44,11 @@ export const AboutMeUseClient = () => {
               <p
                 className={`prose text-white px-4 text-3xl ${roboto.className}`}
               >
-                I began my academic journey at{" "}
-                <span className="text-indigo-600">Iowa State University</span>,
-                where I earned a B.A. in Anthropology with a minor in Mandarin.
-                My passion for understanding diverse cultures and languages lead
-                me to get a job teaching English in a Chinese university. To
-                further enhance my expertise, I pursued an MBA in Health
-                Organization Management from Texas Tech University. More
-                recently, I completed a Software Engineering Bootcamp at Master
-                School, equipping myself with the technical skills necessary for
-                the ever-evolving tech industry.
+                I used to teach English at universities, two, in mainland{" "}
+                <span className="text-indigo-600">China</span> and worked in
+                construction. Now I am transitioning into the tech industry with
+                skills gained from a Software Engineering Bootcamp and
+                self-study.
               </p>
             </div>
           </div>
@@ -79,16 +59,10 @@ export const AboutMeUseClient = () => {
             >
               Currently, I am employed at an{" "}
               <span className="text-blue-600">Apple</span> data center as a
-              Logistics Technician, where I work with hardware and wiping
-              harddrives. My professional journey has been diverse, reflecting
-              my adaptability and wide-ranging interests. I have taught English
-              at Chinese universities, providing me with invaluable
-              cross-cultural communication skills. Additionally, I have hands-on
-              experience in the construction industry, which has honed my
-              project management and teamwork abilities. Alongside these roles,
-              I have been a freelance web developer, where I have successfully
-              delivered various projects, showcasing my technical prowess and
-              problem-solving skills.
+              Logistics Technician, working with hardware and wiping hard
+              drives. Alongside this role, I also do freelance web development
+              work, successfully delivering various projects and showcasing my
+              technical prowess and problem-solving skills.
             </p>
           </div>
           <div className="2xl:flex">
@@ -96,20 +70,11 @@ export const AboutMeUseClient = () => {
               className={`text-white prose px-4 text-3xl 2xl:w-[66vw] mt-8 mb-20 flex flex-col ${roboto.className}`}
             >
               <p>
-                I am a passionate Full Stack Engineer actively seeking a
-                full-time developer position. With a strong foundation in
-                Python, JavaScript/TypeScript, and SQL, I enjoy working with
-                modern technologies such as React,{" "}
-                <span className="text-blue-400">Next.js</span>, TailwindCSS,
-                Postgres, Docker, Django, the Django Rest Framework, and Flask.
-                My commitment to continuous learning and improvement is evident
-                through my contributions to open source projects, particularly
-                in the Django community.
-              </p>
-              <p>
-                I thrive in dynamic environments and am excited about the
-                opportunity to bring my diverse skill set and experience to a
-                forward-thinking team.
+                I have also done open source work on the{" "}
+                <span className="text-blue-400">Django</span> project,
+                showcasing my commitment to continuous learning and improvement.
+                I am eager to put my unique skill set to use solving real-world
+                problems and building innovative solutions.
               </p>
             </div>
             <div className="2xl:w-[33vw] text-white flex flex-col items-center mt-8">
