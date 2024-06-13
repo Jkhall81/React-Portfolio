@@ -23,7 +23,7 @@ export const ContactMeUseClient = () => {
   }, [setNavVisibleTrue, setWelcomeScreenFalse, setIntroMovieFalse]);
 
   return (
-    <HeroHighlight containerClassName="h-full">
+    <HeroHighlight containerClassName="h-full pb-[200px] 4xl:pb-0">
       <div className="h-screen flex flex-col items-center">
         <h1 className="web-master font-bold text-5xl mb-20 mt-[200px]">
           Contact Me
