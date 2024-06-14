@@ -75,6 +75,22 @@ const UWellProjectPage = () => {
             of an admin panel to manage patient and provider user data.
           </p>
         </div>
+        <div className="w-full flex pt-[100px] pb-[100px] 4xl:px-20 px-4">
+          <div className="w-[43%]"></div>
+          <div className="w-[56%] text-white">
+            <h2 className="text-5xl font-semibold">Technology Choices</h2>
+            <p className="prose pt-20 text-white text-2xl">
+              Initially, the client was building the site using Webflow and
+              wanted me to continue with it. I suggested that Next.js might be a
+              better solution. The client required some custom features,
+              including two multi-step forms, one with over thirty questions.
+              Building these forms was an ideal scenario to utilize the reusable
+              component architecture provided by React. Next.js also offers
+              built-in, often automatic, solutions for routing, SEO management,
+              performance optimization, and security.
+            </p>
+          </div>
+        </div>
       </HeroHighlight>
     </div>
   );
