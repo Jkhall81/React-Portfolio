@@ -64,6 +64,17 @@ const UWellProjectPage = () => {
             />
           </div>
         </div>
+        <div className="text-white w-full pt-[240px] px-4 4xl:px-20 pb-[100px]">
+          <h2 className={`text-5xl font-semibold`}>Project Status</h2>
+          <p className="prose pt-20 text-white text-2xl">
+            This project is currently in the second stage of its development.
+            The application has a test build deployed on Vercel and will soon be
+            deployed to AWS using the Amplify service. It will then be connected
+            to a MySQL database via Prisma. Following that, the client has
+            requested the implementation of user authentication and the creation
+            of an admin panel to manage patient and provider user data.
+          </p>
+        </div>
       </HeroHighlight>
     </div>
   );
