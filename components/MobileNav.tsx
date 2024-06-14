@@ -42,7 +42,7 @@ export const MobileNav = () => {
       </div>
       <aside
         className={cn(
-          "fixed z-[40] bottom-0 top-0 w-full h-full p-10 transition-all duration-500",
+          "fixed z-[40] bottom-0 top-0 w-full h-full p-10 transition-all duration-[1500ms]",
           isOpen ? "right-0" : "-right-[200%]"
         )}
       >

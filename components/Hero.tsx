@@ -54,7 +54,7 @@ export const Hero = () => {
           </div>
         </div>
         <div className="pt-[20vh] flex flex-col 3xl:flex 3xl:items-start 3xl:min-w-[66vw]">
-          <div className="max-w-[60vw] min-h-[78vh] mx-auto pb-[200px]">
+          <div className="2xl:max-w-[51vw] 4xl:max-w-[60vw] min-h-[78vh] mx-auto pb-[200px]">
             <motion.div
               variants={fadeIn("left", 0.6)}
               initial="hidden"
