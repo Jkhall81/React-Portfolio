@@ -42,39 +42,58 @@ export const AboutMeUseClient = () => {
             {/* Text Container 1 */}
             <div className="2xl:w-[56vw] flex items-center justify-center">
               <p
-                className={`prose text-white px-4 text-3xl ${roboto.className}`}
+                className={`prose text-white px-4 text-4xl ${roboto.className}`}
               >
-                I used to teach English at universities, two, in mainland{" "}
-                <span className="text-indigo-600">China</span> and worked in
+                I used to teach English in mainland{" "}
+                <span className="text-indigo-600">China</span> and have worked
                 construction. Now I am transitioning into the tech industry with
-                skills gained from a Software Engineering Bootcamp and
-                self-study.
+                skills gained from a Software Engineering Bootcamp, freelance
+                work, and self-study. Currently, I am employed at an Apple data
+                center as a Logistics Technician, working with hardware, wiping
+                hard drives, and learning a great deal about how data centers
+                operate.
               </p>
             </div>
           </div>
           {/* Text Container 2 */}
-          <div>
+          <div className="flex flex-col items-center px-4 4xl:px-20">
             <p
-              className={`text-white prose text-3xl px-4 mt-20 mb-20 ${roboto.className}`}
+              className={`text-white prose text-4xl mt-20 mb-10 ${roboto.className}`}
             >
-              Currently, I am employed at an{" "}
-              <span className="text-blue-600">Apple</span> data center as a
-              Logistics Technician, working with hardware and wiping hard
-              drives. Alongside this role, I also do freelance web development
-              work, successfully delivering various projects and showcasing my
-              technical prowess and problem-solving skills.
+              In addition to my work and studies, I dedicate a significant
+              portion of my time to helping others in a voluntary capacity. I
+              serve as a sober living house manager, a role that involves living
+              and working with eleven men who are transitioning from prison,
+              overcoming substance abuse, or managing mental health challenges.
+            </p>
+            <p
+              className={`text-white prose text-4xl mb-20 ${roboto.className}`}
+            >
+              In this role, I provide daily support and guidance to help
+              residents navigate their personal and legal challenges. I also
+              coordinate with parole and probation officers, as well as case
+              managers, to ensure compliance with their recovery plans and legal
+              obligations. Furthermore, I create and maintain a structured,
+              supportive environment that fosters accountability and personal
+              growth. This work is deeply rewarding, as I get to witness
+              firsthand the positive transformations in these men's lives. It
+              reinforces my belief in the power of community and support in
+              overcoming significant life obstacles.
             </p>
           </div>
           <div className="2xl:flex">
             <div
-              className={`text-white prose px-4 text-3xl 2xl:w-[66vw] mt-8 mb-20 flex flex-col ${roboto.className}`}
+              className={`text-white prose px-4 text-4xl 2xl:w-[66vw] mt-8 mb-20 flex flex-col ${roboto.className}`}
             >
               <p>
                 I have also done open source work on the{" "}
                 <span className="text-blue-400">Django</span> project,
                 showcasing my commitment to continuous learning and improvement.
-                I am eager to put my unique skill set to use solving real-world
-                problems and building innovative solutions.
+                Through this work, I have learned a lot from more experienced
+                Django developers about Django's architecture, documentation,
+                linting, and testing. I am eager to put my unique skill set to
+                use solving real-world problems and building innovative
+                solutions.
               </p>
             </div>
             <div className="2xl:w-[33vw] text-white flex flex-col items-center mt-8">
