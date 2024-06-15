@@ -1,41 +1,57 @@
 import Image from "next/image";
 
-export const ProjectPics = () => {
+interface ImageProps {
+  href: string;
+}
+
+interface Props {
+  images: ImageProps[];
+}
+
+export const ProjectPics = ({ images }: Props) => {
   return (
     <div className="w-full flex flex-col">
       <div className="w-full 4xl:justify-center 4xl:space-x-20 space-y-20 4xl:space-y-0 4xl:flex">
-        <Image
-          src="/images/LightHouse.png"
-          alt="lighthouse performance score"
-          height={950}
-          width={950}
-          className="rounded-3xl object-cover mx-auto 4xl:mx-0"
-        />
-        <Image
-          src="/images/FAQ.png"
-          alt="lighthouse performance score"
-          height={950}
-          width={950}
-          className="rounded-3xl object-cover mx-auto 4xl:mx-0"
-        />
+        {images[0] && (
+          <Image
+            src={images[0].href}
+            alt="lighthouse performance score"
+            height={950}
+            width={950}
+            className="rounded-3xl object-cover mx-auto 4xl:mx-0"
+          />
+        )}
+        {images[1] && (
+          <Image
+            src={images[1].href}
+            alt="lighthouse performance score"
+            height={950}
+            width={950}
+            className="rounded-3xl object-cover mx-auto 4xl:mx-0"
+          />
+        )}
       </div>
       <div className="w-full pt-20 4xl:ml-[500px]">
-        <Image
-          src="/images/PatientFormIntro.png"
-          alt="lighthouse performance score"
-          height={950}
-          width={950}
-          className="rounded-3xl object-cover mx-auto 4xl:mx-0"
-        />
+        {images[2] && (
+          <Image
+            src={images[2].href}
+            alt="lighthouse performance score"
+            height={950}
+            width={950}
+            className="rounded-3xl object-cover mx-auto 4xl:mx-0"
+          />
+        )}
       </div>
       <div className="pt-20 4xl:ml-[1000px] pb-20">
-        <Image
-          src="/images/ProviderForm1.png"
-          alt="lighthouse performance score"
-          height={950}
-          width={950}
-          className="rounded-3xl object-cover mx-auto 4xl:mx-0"
-        />
+        {images[3] && (
+          <Image
+            src={images[3].href}
+            alt="lighthouse performance score"
+            height={950}
+            width={950}
+            className="rounded-3xl object-cover mx-auto 4xl:mx-0"
+          />
+        )}
       </div>
     </div>
   );

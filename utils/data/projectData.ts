@@ -7,3 +7,18 @@ export const projectData = [
     direction: "left",
   },
 ];
+
+export const ProjectImages = [
+  {
+    href: "/images/LightHouse.png",
+  },
+  {
+    href: "/images/FAQ.png",
+  },
+  {
+    href: "/images/PatientFormIntro.png",
+  },
+  {
+    href: "/images/ProviderForm1.png",
+  },
+];

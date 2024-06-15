@@ -6,6 +6,7 @@ import { stack } from "@/utils/data/stackData";
 import Image from "next/image";
 import Link from "next/link";
 import { ProjectPics } from "@/components/ProjectPics";
+import { ProjectImages } from "@/utils/data/projectData";
 
 const headingStyles = "text-3xl font-bold";
 const h2Styles = "text-5xl text-neutral-500 font-semibold";
@@ -86,18 +87,19 @@ const UWellProjectPage = () => {
           <div className="w-full 4xl:w-[56%] text-white">
             <h2 className={`${h2Styles}`}>Technology Choices</h2>
             <p className="prose pt-20 pb-20 text-white text-3xl">
-              Initially, the client was building the site using Webflow and
-              wanted me to continue with it. I suggested that Next.js might be a
-              better solution. The client required some custom features,
-              including two multi-step forms, one with over thirty questions.
-              Building these forms was an ideal scenario to utilize the reusable
-              component architecture provided by React. Next.js also offers
-              built-in, often automatic, solutions for routing, SEO management,
-              performance optimization, and security.
+              For this project, I chose to use Next.js. While I have experience
+              with Angular, I find the React ecosystem offers more robust tools.
+              The client required several custom features, including two
+              multi-step forms, one with over thirty questions. This made it an
+              ideal scenario to leverage the reusable component architecture
+              provided by React. Additionally, Next.js offers built-in solutions
+              for routing, SEO management, performance optimization, and
+              security, often automating these processes to enhance efficiency
+              and reliability.
             </p>
           </div>
         </div>
-        <ProjectPics />
+        <ProjectPics images={ProjectImages} />
       </HeroHighlight>
     </div>
   );

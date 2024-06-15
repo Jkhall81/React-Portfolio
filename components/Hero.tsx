@@ -6,6 +6,7 @@ import { Spotlight } from "./ui/Spotlight";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/fadein";
 import Image from "next/image";
+import Link from "next/link";
 import { bitter } from "@/utils/fonts";
 import { roboto } from "@/utils/fonts";
 import SocialLinks from "./SocialLinks";
@@ -62,13 +63,18 @@ export const Hero = () => {
               viewport={{ once: true, amount: 0.4 }}
             >
               <BackgroundGradient>
-                <Image
-                  src="/images/69561.jpg"
-                  alt="Kanagawa Wave"
-                  height={950}
-                  width={1250}
-                  className="rounded-3xl ms-[1/2px]"
-                />
+                <Link
+                  target="_blank"
+                  href="https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa"
+                >
+                  <Image
+                    src="/images/69561.jpg"
+                    alt="Kanagawa Wave"
+                    height={950}
+                    width={1250}
+                    className="rounded-3xl ms-[1/2px]"
+                  />
+                </Link>
               </BackgroundGradient>
             </motion.div>
             {/* <div className="flex justify-center pt-[80px]">

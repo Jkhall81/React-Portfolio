@@ -33,7 +33,7 @@ export const NavBar = () => {
           <Link
             className={cn(
               "hover:text-purple-600 text-2xl hover:scale-110",
-              pathname === link.href ? "text-purple-600" : ""
+              pathname.startsWith(link.href) ? "text-purple-600" : ""
             )}
             href={link.href}
             key={index}
