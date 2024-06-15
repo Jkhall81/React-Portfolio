@@ -5,8 +5,10 @@ import { HeroHighlight } from "@/components/ui/HeroHighlight";
 import { stack } from "@/utils/data/stackData";
 import Image from "next/image";
 import Link from "next/link";
+import { ProjectPics } from "@/components/ProjectPics";
 
 const headingStyles = "text-3xl font-bold";
+const h2Styles = "text-5xl text-neutral-500 font-semibold";
 
 const UWellProjectPage = () => {
   usePageSetup();
@@ -16,16 +18,20 @@ const UWellProjectPage = () => {
         <div className="3xl:flex">
           <div className="flex flex-col pt-[200px] 4xl:w-[50%] px-4 4xl:px-20">
             <h1 className="text-white text-6xl pb-20">U-Well Health</h1>
-            <p className="text-white prose text-2xl pb-10">
+            <p className="text-white prose text-3xl pb-10">
               U-Well is a Next.js application built for a telehealth startup to
               match potential patients with therapists. This ongoing project
               involves collaboration with a backend engineer and a content
               creation team. It requires careful design, secure handling of
               sensitive data, and delivering an excellent user experience.
             </p>
-            <p className="text-white prose text-2xl">
-              This section is currently being built. I started this section at 4
-              AM June 13th 2024. I should have it completed soon.
+            <p className="text-white prose text-3xl">
+              I started working on this project in March 2024. Throughout the
+              development process, I have utilized Test Driven Development (TDD)
+              with the aid of Jest to ensure high-quality code. For photo
+              editing and stock photos, I have leveraged Adobe Express.
+              Additionally, I have been preparing the site for deployment on AWS
+              (Amplify), ensuring a robust and scalable infrastructure.
             </p>
             <div className="flex w-full">
               <div className="w-full flex space-x-[160px] text-white pt-20">
@@ -65,8 +71,8 @@ const UWellProjectPage = () => {
           </div>
         </div>
         <div className="text-white w-full pt-[240px] px-4 4xl:px-20 pb-[100px]">
-          <h2 className={`text-5xl font-semibold`}>Project Status</h2>
-          <p className="prose pt-20 text-white text-2xl">
+          <h2 className={`${h2Styles}`}>Project Status</h2>
+          <p className="prose pt-20 text-white text-3xl">
             This project is currently in the second stage of its development.
             The application has a test build deployed on Vercel and will soon be
             deployed to AWS using the Amplify service. It will then be connected
@@ -76,10 +82,10 @@ const UWellProjectPage = () => {
           </p>
         </div>
         <div className="w-full flex pt-[100px] pb-[100px] 4xl:px-20 px-4">
-          <div className="w-[43%]"></div>
-          <div className="w-[56%] text-white">
-            <h2 className="text-5xl font-semibold">Technology Choices</h2>
-            <p className="prose pt-20 text-white text-2xl">
+          <div className="w -[0%] 4xl:w-[43%]"></div>
+          <div className="w-full 4xl:w-[56%] text-white">
+            <h2 className={`${h2Styles}`}>Technology Choices</h2>
+            <p className="prose pt-20 pb-20 text-white text-3xl">
               Initially, the client was building the site using Webflow and
               wanted me to continue with it. I suggested that Next.js might be a
               better solution. The client required some custom features,
@@ -91,6 +97,7 @@ const UWellProjectPage = () => {
             </p>
           </div>
         </div>
+        <ProjectPics />
       </HeroHighlight>
     </div>
   );
