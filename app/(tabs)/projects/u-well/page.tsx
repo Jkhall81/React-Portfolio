@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ProjectPics } from "@/components/ProjectPics";
 import { ProjectImages } from "@/utils/data/projectData";
+import { MagicButton } from "@/components/ui/MagicButton";
 
 const headingStyles = "text-3xl font-bold";
 const h2Styles = "text-5xl text-neutral-500 font-semibold";
@@ -100,6 +101,35 @@ const UWellProjectPage = () => {
           </div>
         </div>
         <ProjectPics images={ProjectImages} />
+        <div className="4xl:px-20 px-4">
+          <h2 className={`${h2Styles} pb-20`}>What I Learned</h2>
+          <p className="prose pb-20 text-white text-3xl">
+            Throughout this project, I have learned a great deal, with more yet
+            to come. On the design front, I've discovered the value of
+            simplicity and its effectiveness. I deepened my understanding of AWS
+            Amplify, IAM roles, and permissions. Given that this site handles
+            sensitive patient data, I prioritized learning more about
+            cybersecurity. This led me to implement content security policies in
+            Next.js.
+          </p>
+          <p className="prose pb-20 text-white text-3xl">
+            To further enhance my knowledge, I installed Kali Linux via
+            VirtualBox and explored various penetration testing tools. This
+            journey allowed me to better understand SQL injection and XSS
+            attacks, as well as the front-end measures necessary to prevent
+            them. For example, I used Prisma in this project, which utilizes
+            parameterized queries to help prevent SQL injection attacks.
+          </p>
+        </div>
+        <div className="4xl:px-20 pb-20 px-4 flex flex-col items-end">
+          <h2 className={`${h2Styles} pb-20`}>Drop Me a Line</h2>
+          <p className="prose pb-20 text-white text-3xl">
+            Interested in getting in touch with me?
+          </p>
+          <Link href="/contact-me">
+            <MagicButton classNames="w-[300px] text-2xl" title="Contact Me" />
+          </Link>
+        </div>
       </HeroHighlight>
     </div>
   );
