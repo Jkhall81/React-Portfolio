@@ -8,7 +8,7 @@ const cspHeader = `
     font-src 'self';
     object-src 'none';
     base-uri 'self';
-    form-action 'self';
+    form-action 'self' https://getform.io;
     frame-ancestors 'self';
     upgrade-insecure-requests;
 `;
