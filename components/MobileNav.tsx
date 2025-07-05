@@ -1,84 +1,73 @@
 "use client";
 
 import { useState } from "react";
-import { useNavStore } from "@/store/store";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
-import Image from "next/image";
-import { cn } from "@/utils/cn";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { cn } from "@/utils/cn";
 
 export const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navVisible = useNavStore((state) => state.navVisible);
+  const pathname = usePathname();
 
-  const handleClick = () => {
-    setIsOpen(!isOpen);
-  };
   const navLinks = [
-    { name: "Home", href: "/home" },
+    { name: "Home", href: "/" },
     { name: "About Me", href: "/about-me" },
     { name: "My Tech Stack", href: "/my-tech-stack" },
     { name: "Projects", href: "/projects" },
     { name: "Resume", href: "/resume" },
     { name: "Contact Me", href: "/contact-me" },
   ];
-  const pathname = usePathname();
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+
   return (
-    <nav
-      className={cn(
-        "z-[40] h-[90px] flex xl:hidden w-full top-0 absolute bg-transparent",
-        `${navVisible ? "" : "hidden"}`
-      )}
-    >
-      <div className="flex items-center w-full p-4 justify-end">
+    <>
+      {/* Mobile Nav Toggle Button */}
+      <nav className="fixed top-0 left-0 right-0 z-50 lg:hidden flex items-center justify-end h-[70px] px-4 bg-black/70 backdrop-blur border-b border-neutral-800">
         <GiHamburgerMenu
-          onClick={handleClick}
-          size={75}
-          color="purple"
-          className="hover:cursor-pointer"
+          onClick={toggleMenu}
+          size={32}
+          className={cn(
+            "text-purple-400 hover:cursor-pointer transition-transform duration-300 ease-in-out",
+            isOpen ? "rotate-90" : "rotate-0"
+          )}
         />
-      </div>
-      <aside
-        className={cn(
-          "fixed z-[40] bottom-0 top-0 w-full h-full p-10 transition-all duration-[1500ms]",
-          isOpen ? "right-0" : "-right-[200%]"
-        )}
-      >
-        <Image
-          src="/images/skills.jpg"
-          alt="japanese landscape"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute flex flex-col z-[50] w-full h-full">
-          <div className="w-full flex items-center justify-end">
-            <IoClose
-              onClick={handleClick}
-              size={75}
-              color="purple"
-              className="mr-[45px] hover:cursor-pointer"
-            />
-          </div>
-          <div className="flex flex-col items-center justify-center">
-            {navLinks.map((link, index) => {
-              return (
+      </nav>
+
+      {/* Modal Overlay */}
+      {isOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm">
+          {/* Glass Card with Gradient */}
+          <div className="relative w-[90%] max-w-md rounded-2xl border border-white/20 p-10 shadow-2xl bg-gradient-to-br from-[#5f0a87]/60 via-[#a4508b]/40 to-[#e0c3fc]/30 backdrop-blur-xl">
+            {/* Close Button */}
+            <button
+              onClick={toggleMenu}
+              className="absolute top-4 right-4 text-purple-300 hover:text-purple-100"
+            >
+              <IoClose size={30} />
+            </button>
+
+            {/* Nav Links */}
+            <nav className="flex flex-col items-center space-y-6 mt-6 text-white text-center">
+              {navLinks.map((link) => (
                 <Link
-                  key={index}
-                  onClick={handleClick}
-                  className="py-4"
+                  key={link.href}
                   href={link.href}
+                  onClick={toggleMenu}
+                  className={cn(
+                    "text-2xl font-semibold transition duration-300 transform hover:scale-110 hover:text-pink-400 hover:drop-shadow-[0_0_8px_#e879f9]",
+                    pathname === link.href ? "text-purple-400" : ""
+                  )}
                 >
-                  <span className="text-4xl font-semibold web-master">
-                    {link.name}
-                  </span>
+                  {link.name}
                 </Link>
-              );
-            })}
+              ))}
+            </nav>
           </div>
         </div>
-      </aside>
-    </nav>
+      )}
+    </>
   );
 };

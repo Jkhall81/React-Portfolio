@@ -1,3 +1,4 @@
+// components/layout/NavBar.tsx
 "use client";
 
 import Link from "next/link";
@@ -25,7 +26,7 @@ export const NavBar = () => {
         >
           Jason Hall
         </Link>
-        <div className="hidden md:flex gap-8">
+        <div className="hidden lg:flex gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.href}
