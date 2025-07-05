@@ -1,100 +1,62 @@
 "use client";
 
-import { usePageSetup } from "@/hooks/usePageSetup";
-import { BackgroundGradient } from "./ui/BackgroundGradient";
-import { Spotlight } from "./ui/Spotlight";
 import { motion } from "framer-motion";
-import { fadeIn } from "@/utils/fadein";
-import Image from "next/image";
 import Link from "next/link";
-import { bitter } from "@/utils/fonts";
-import { roboto } from "@/utils/fonts";
+import { Spotlight } from "./ui/Spotlight";
 import SocialLinks from "./SocialLinks";
+import { usePageSetup } from "@/hooks/usePageSetup";
 
 export const Hero = () => {
   usePageSetup();
-
   return (
-    <main className="h-full min-h-screen">
-      <div className="h-full w-full">
-        <Spotlight
-          className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
-          fill="white"
-        />
-        <Spotlight
-          className="h-[80vh] w-[70vw] top-10 left-[10vw]"
-          fill="purple"
-        />
-        <Spotlight
-          className="left-[350px] top-28 h-[80vh] w-[50vw]"
-          fill="blue"
-        />
-      </div>
-      <div className="3xl:flex h-full">
-        <div className="pt-[250px]">
-          <div className="flex flex-col min-w-[33vw] justify-center items-center">
-            <h1 className="text-white text-7xl pb-6 mt-[300px]">
-              <span className={`web-master font-extrabold ${bitter.className}`}>
-                Jason Hall
-              </span>
-            </h1>
-            <h2 className="text-white text-5xl pt-[30px]">
-              Full-Stack Engineer
-            </h2>
-            <div className="flex flex-col w-full mx-20 items-center text-white">
-              <p className="text-4xl">
-                <span className="text-purple-500 text-4xl"></span>{" "}
-              </p>
+    <main className="relative min-h-screen flex items-center justify-center px-6 bg-black text-white overflow-hidden">
+      {/* Background Glow */}
+      <Spotlight
+        className="absolute top-0 left-0 w-[100vw] h-[100vh] z-0"
+        fill="blue"
+      />
+      <Spotlight
+        className="absolute top-1/3 left-1/2 w-[60vw] h-[60vh] z-0 opacity-30"
+        fill="purple"
+      />
 
-              <p
-                className={`prose mt-8 text-white text-2xl ${roboto.className}`}
-              ></p>
+      {/* Content */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="relative z-10 max-w-3xl text-center"
+      >
+        <h1 className="text-5xl md:text-7xl font-extrabold bg-gradient-to-r from-pink-500 to-red-500 bg-clip-text text-transparent">
+          Jason Hall
+        </h1>
+        <h2 className="text-2xl md:text-3xl mt-4 text-gray-300">
+          Full-Stack Engineer
+        </h2>
+        <p className="mt-6 text-lg text-gray-400">
+          Building internal tools, scripting weird automation, and learning in
+          public.
+        </p>
 
-              <SocialLinks size={40} classNames="mt-10" />
-            </div>
-          </div>
+        <div className="mt-8 flex justify-center gap-4">
+          <Link
+            href="/projects"
+            className="px-6 py-2 bg-purple-600 rounded-md hover:bg-purple-700 transition"
+          >
+            View Projects
+          </Link>
+          <Link
+            href="/contact-me"
+            className="px-6 py-2 border border-gray-500 rounded-md hover:bg-gray-800 transition"
+          >
+            Contact Me
+          </Link>
         </div>
-        <div className="pt-[20vh] flex flex-col 3xl:flex 3xl:items-start 3xl:min-w-[66vw]">
-          <div className="2xl:max-w-[51vw] 4xl:max-w-[60vw] min-h-[78vh] mx-auto pb-[200px]">
-            <motion.div
-              variants={fadeIn("left", 0.6)}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.4 }}
-            >
-              <BackgroundGradient>
-                <Link
-                  target="_blank"
-                  href="https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa"
-                >
-                  <Image
-                    src="/images/69561.jpg"
-                    alt="Kanagawa Wave"
-                    height={950}
-                    width={1250}
-                    className="rounded-3xl ms-[1/2px]"
-                  />
-                </Link>
-              </BackgroundGradient>
-            </motion.div>
-            {/* <div className="flex justify-center pt-[80px]">
-              <Link href="/my-tech-stack">
-                <LitButton
-                  title="Learn More"
-                  classNames="w=[200px] 2xl:w-[10vw] text-lg"
-                />
-              </Link>
-              <Link href="/contact-me">
-                <MagicButton
-                  title="Contact Me"
-                  classNames="ml-8 w-[200px] xl:w-[10vw] text-lg"
-                />
-              </Link>
-            </div> */}
-          </div>
-          <div className="flex flex-col items-center 3xl:mx-[3vw] 3xl:w-[15vw]"></div>
+
+        <div className="mt-10">
+          <SocialLinks size={32} />
         </div>
-      </div>
+      </motion.div>
     </main>
   );
 };

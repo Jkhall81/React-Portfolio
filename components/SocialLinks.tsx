@@ -1,9 +1,7 @@
-import {
-  FaGithub,
-  FaFacebookF,
-  FaLinkedinIn,
-  FaWhatsapp,
-} from "react-icons/fa";
+"use client";
+
+import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import Link from "next/link";
 import { cn } from "@/utils/cn";
 
@@ -12,55 +10,50 @@ interface Props {
   size: number;
 }
 
-const links = [
-  {
-    icon: FaFacebookF,
-    href: "https://www.facebook.com/profile.php?id=100081060077918",
-    target: "_blank",
-    color: "#316ff6",
-    "aria-label": "Facebook icon link",
-  },
-  {
-    icon: FaLinkedinIn,
-    href: "https://www.linkedin.com/in/jason-hall-650964242",
-    target: "_blank",
-    color: "#0a66c2",
-    "aria-label": "Linkedin icon link",
-  },
-  {
-    icon: FaGithub,
-    href: "https://github.com/Jkhall81",
-    target: "_blank",
-    color: "white",
-    "aria-label": "Github icon link",
-  },
-  {
-    icon: FaWhatsapp,
-    href: "https://api.whatsapp.com/send?phone=6232062944",
-    target: "_blank",
-    color: "#25d366",
-    "aria-label": "Whatsapp Icon link",
-  },
-];
-
 const SocialLinks = ({ classNames, size }: Props) => {
   return (
-    <div className={cn("flex justify-evenly w-full", `${classNames}`)}>
-      {links.map((item, index) => {
-        const LinkIcon = item.icon;
-        return (
-          <div key={index}>
-            <Link
-              href={item.href}
-              target={item.target}
-              aria-label={item["aria-label"]}
-            >
-              <LinkIcon color={item.color} size={size} />
-            </Link>
-          </div>
-        );
-      })}
+    <div className={cn("flex justify-evenly gap-6 w-full", classNames)}>
+      {/* Email */}
+      <Link
+        href="mailto:jason@example.com"
+        target="_blank"
+        aria-label="Email icon link"
+        className="p-3 rounded-full transition duration-300 ease-in-out hover:scale-110 hover:bg-[#f87171]/20 hover:shadow-[0_0_20px_#f87171]"
+      >
+        <MdEmail color="#f87171" size={size} />
+      </Link>
+
+      {/* LinkedIn */}
+      <Link
+        href="https://www.linkedin.com/in/jason-hall-650964242"
+        target="_blank"
+        aria-label="Linkedin icon link"
+        className="p-3 rounded-full transition duration-300 ease-in-out hover:scale-110 hover:bg-[#0a66c2]/20 hover:shadow-[0_0_20px_#0a66c2]"
+      >
+        <FaLinkedinIn color="#0a66c2" size={size} />
+      </Link>
+
+      {/* GitHub */}
+      <Link
+        href="https://github.com/Jkhall81"
+        target="_blank"
+        aria-label="Github icon link"
+        className="p-3 rounded-full transition duration-300 ease-in-out hover:scale-110 hover:bg-white/10 hover:shadow-[0_0_20px_#ffffff80]"
+      >
+        <FaGithub color="#ffffff" size={size} />
+      </Link>
+
+      {/* WhatsApp */}
+      <Link
+        href="https://api.whatsapp.com/send?phone=6232062944"
+        target="_blank"
+        aria-label="Whatsapp icon link"
+        className="p-3 rounded-full transition duration-300 ease-in-out hover:scale-110 hover:bg-[#25d366]/20 hover:shadow-[0_0_20px_#25d366]"
+      >
+        <FaWhatsapp color="#25d366" size={size} />
+      </Link>
     </div>
   );
 };
+
 export default SocialLinks;
