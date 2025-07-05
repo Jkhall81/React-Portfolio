@@ -15,7 +15,7 @@ const SocialLinks = ({ classNames, size }: Props) => {
     <div className={cn("flex justify-evenly gap-6 w-full", classNames)}>
       {/* Email */}
       <Link
-        href="mailto:jason@example.com"
+        href="mailto:jason.kei.hall@gmail.com"
         target="_blank"
         aria-label="Email icon link"
         className="p-3 rounded-full transition duration-300 ease-in-out hover:scale-110 hover:bg-[#f87171]/20 hover:shadow-[0_0_20px_#f87171]"
