@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/fadein";
-import { FaTerminal, FaServer, FaBug, FaLock } from "react-icons/fa";
+import { FaBug, FaLock, FaTerminal, FaServer } from "react-icons/fa";
 
 export const ThreatDetectorProject = () => {
   return (
@@ -21,8 +21,10 @@ export const ThreatDetectorProject = () => {
         </h2>
         <p className="text-lg text-gray-300 mb-6">
           A modular Apache log parser written in Perl to detect intrusion
-          attempts across Vicidial and Linux-based web servers. Designed for
-          real-world ops, sysadmins, and security-conscious devs.
+          attempts on Linux-based web servers and Vicidial systems. Install the
+          module, call{" "}
+          <code>ThreatDetector::ThreatDetector::analyze_log()</code>, and it
+          just works — no config needed.
         </p>
 
         {/* Icons */}
@@ -44,16 +46,16 @@ export const ThreatDetectorProject = () => {
             Suspicious Headers
           </div>
           <div className="flex flex-col items-center">
-            <FaServer size={28} className="text-orange-400" />
-            Remote SSH Scanning
-          </div>
-          <div className="flex flex-col items-center">
             <FaBug size={28} className="text-red-500" />
             Encoded Payloads
           </div>
+          <div className="flex flex-col items-center">
+            <FaBug size={28} className="text-yellow-500" />
+            Client Errors & Method Abuse
+          </div>
         </div>
 
-        {/* GitHub + Coming Soon */}
+        {/* GitHub + CPAN Link */}
         <div className="flex flex-wrap gap-4 mb-8">
           <Link
             href="https://github.com/Jkhall81/Apache_Log_Parser"
@@ -62,29 +64,41 @@ export const ThreatDetectorProject = () => {
           >
             View Code
           </Link>
-          <span className="px-4 py-2 rounded-md border border-yellow-500 text-yellow-400 font-mono text-sm opacity-70">
-            Coming Soon: CPAN Module
-          </span>
+          <Link
+            href="https://metacpan.org/release/JHALL/ThreatDetector-0.04"
+            target="_blank"
+            className="px-4 py-2 rounded-md border border-yellow-500 text-yellow-400 hover:bg-yellow-500 hover:text-black transition font-mono text-sm"
+          >
+            Install from CPAN
+          </Link>
         </div>
 
+        {/* Example Output */}
         <pre className="text-green-400 bg-black p-4 rounded-md text-sm font-mono whitespace-pre-wrap break-words mt-6 mb-8">
-          SSH [192.168.1.42] ✔ Connected Scanning /var/log/apache2/access.log...
-          Found 8 SQLi attempts Found 3 XSS payloads Report saved to:
-          ./logs/threat-summary-192.168.1.42.json
+          Parsing log file...
+          {"\n"}[2025-07-06 12:21:33] [SQLInjection] 192.168.1.42 GET
+          /index.php?id=1%20OR%201=1
+          {"\n"}[2025-07-06 12:21:35] [XSS] 192.168.1.42 GET
+          /search?q=&lt;script&gt;alert(1)&lt;/script&gt;
+          {"\n"}Threat summary saved to ./2025-07-06_threat_results.log
         </pre>
 
-        {/* Features / Notes */}
+        {/* Features */}
         <div className="space-y-6">
           <div>
             <h3 className="text-xl font-semibold text-yellow-300">
               Key Features
             </h3>
             <ul className="list-disc list-inside text-gray-300">
-              <li>Detects and classifies 10+ attack types from Apache logs</li>
-              <li>Works across multiple servers via SSH</li>
-              <li>Host-specific config overrides and summaries</li>
-              <li>Colorized CLI for setup, scanning, and feedback</li>
-              <li>Minimal dependencies: Perl 5.10+ and a few CPAN modules</li>
+              <li>
+                Detects and classifies 10+ web attack types from Apache logs
+              </li>
+              <li>
+                Drop-in usage with <code>analyze_log()</code>
+              </li>
+              <li>Verbose output for CLI visibility</li>
+              <li>No external config or setup required</li>
+              <li>Minimal dependencies: Perl 5.10+ and core CPAN modules</li>
             </ul>
           </div>
 
@@ -98,7 +112,8 @@ export const ThreatDetectorProject = () => {
                 <code>Getopt::Long</code>
               </li>
               <li>
-                <code>Term::ANSIColor</code>, <code>IPC::System::Simple</code>
+                <code>Time::HiRes</code>, <code>POSIX</code>,{" "}
+                <code>IPC::System::Simple</code>
               </li>
             </ul>
           </div>

@@ -2,7 +2,7 @@
 
 import { usePageSetup } from "@/hooks/usePageSetup";
 
-const pdfSrc = "/Jason-Hall-Resume-20250704.pdf";
+const pdfSrc = "/Jason-Hall-Resume-20250706.pdf";
 
 export const ResumeUseClient = () => {
   usePageSetup();
