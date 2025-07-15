@@ -84,7 +84,7 @@ export const MyTechStackUseClient = () => {
           <ul className="text-2xl space-y-2 list-disc list-inside text-gray-200">
             <li>Perl, PHP, JavaScript, SQL, MySQL</li>
             <li>Postman, REST API development (Dancer2)</li>
-            <li>Quickbase, Salesforce integration, Boberdoo, Ytel</li>
+            <li>Quickbase, Salesforce, Boberdoo, Ytel</li>
             <li>Vicidial systems, custom UI integrations, ETL pipelines</li>
             <li>Linux system administration (OpenSUSE, Ubuntu, Mint)</li>
             <li>Automation scripting (Perl), jQuery, in-house tooling</li>

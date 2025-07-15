@@ -39,7 +39,7 @@ export const GoldenSolProject = () => {
         {/* Links */}
         <div className="flex gap-4 mb-8">
           <Link
-            href="https://golden-sol-tanning.vercel.app/"
+            href="https://golden-sol-tanning.com/"
             target="_blank"
             className="px-4 py-2 rounded-md bg-purple-600 hover:bg-purple-700 transition text-white font-medium"
           >
