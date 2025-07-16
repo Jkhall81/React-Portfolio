@@ -81,9 +81,16 @@ export const GoldenSolProject = () => {
             </h3>
             <ul className="list-disc list-inside text-gray-300">
               <li>Custom analytics system (no third-party scripts)</li>
-              <li>Tracks page views, screen size, IP, referrer, user agent</li>
-              <li>Serverless logging with Firebase Firestore</li>
-              <li>Responsive, accessible, mobile-optimized design</li>
+              <li>
+                Tracks page views, screen size, IP address, referrer, user
+                agent, and visit time
+              </li>
+              <li>Appointment booking with email notifications via Resend</li>
+              <li>
+                Serverless tracking and appointment data logging with Firebase
+                Firestore
+              </li>
+              <li>Responsive, accessible, and mobile-optimized design</li>
             </ul>
           </div>
         </div>
