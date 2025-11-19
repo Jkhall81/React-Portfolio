@@ -6,6 +6,7 @@ import { GoldenSolProject } from "../projects/goldenSolProject";
 import { TauriListToolProject } from "../projects/TauriListToolProject";
 import { ThreatDetectorProject } from "../projects/ThreatDetectorProject";
 import { FloatingSocialCard } from "../projects/FloatingSocialCard";
+import { NVMPerlProject } from "../projects/NVMPerlProject";
 
 export const ProjectsUseClient = () => {
   usePageSetup();
@@ -21,6 +22,7 @@ export const ProjectsUseClient = () => {
         <GoldenSolProject />
         <TauriListToolProject />
         <ThreatDetectorProject />
+        <NVMPerlProject />
       </div>
     </HeroHighlight>
   );
