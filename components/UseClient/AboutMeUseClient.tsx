@@ -117,7 +117,7 @@ export const AboutMeUseClient = () => {
                 millions of data points annually.
               </p>
               <ul className="grid grid-cols-2 gap-4 text-sm font-mono text-purple-400 mt-6">
-                <li>// Go & Perl ETL</li>
+                <li>// Rust & Perl ETL</li>
                 <li>// MySQL Optimization</li>
                 <li>// Linux SysAdmin</li>
                 <li>// API Architecture</li>
