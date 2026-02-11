@@ -7,7 +7,7 @@ import { TauriListToolProject } from "../projects/TauriListToolProject";
 import { ThreatDetectorProject } from "../projects/ThreatDetectorProject";
 import { FloatingSocialCard } from "../projects/FloatingSocialCard";
 import { NVMPerlProject } from "../projects/NVMPerlProject";
-import { AnsibleOpenSource } from "../projects/AnsibleOpenSource";
+import { LinuxOpenSource } from "../projects/LinuxOpenSource";
 
 export const ProjectsUseClient = () => {
   usePageSetup();
@@ -24,7 +24,7 @@ export const ProjectsUseClient = () => {
         <TauriListToolProject />
         <ThreatDetectorProject />
         <NVMPerlProject />
-        <AnsibleOpenSource />
+        <LinuxOpenSource />
       </div>
     </HeroHighlight>
   );
