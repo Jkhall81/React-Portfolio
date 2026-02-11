@@ -19,7 +19,7 @@ export const MyTechStackUseClient = () => {
     <HeroHighlight containerClassName="h-full">
       <FloatingSocialCard />
       <div className="min-h-screen w-full flex flex-col items-center text-white">
-        {/* Hero / Image Section */}
+        {/* Hero Section */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -28,10 +28,17 @@ export const MyTechStackUseClient = () => {
           className="pt-[100px] w-full max-w-7xl px-6 mb-32"
         >
           <h1
-            className={`text-6xl font-semibold mb-16 text-center ${bitter.className}`}
+            className={`text-6xl font-semibold mb-8 text-center ${bitter.className}`}
           >
-            The Tools I Use to Build, Fix, and Create
+            Systems Engineer & Open Source Contributor
           </h1>
+          <p
+            className={`text-2xl text-center mb-16 max-w-3xl mx-auto text-gray-300 ${roboto.className}`}
+          >
+            I specialize in backend infrastructure, high-performance developer
+            tooling, and the modernization of mission-critical systems.
+          </p>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="flex justify-center">
               <Image
@@ -39,7 +46,7 @@ export const MyTechStackUseClient = () => {
                 alt="Code Screenshot"
                 width={450}
                 height={450}
-                className="rounded-3xl rounded-tl-[80px]"
+                className="rounded-3xl rounded-tl-[80px] border border-white/10"
               />
             </div>
             <div className="flex flex-col gap-8">
@@ -48,20 +55,20 @@ export const MyTechStackUseClient = () => {
                 alt="Code Screenshot"
                 width={450}
                 height={450}
-                className="rounded-3xl rounded-tr-[80px]"
+                className="rounded-3xl rounded-tr-[80px] border border-white/10"
               />
               <Image
                 src="/images/programming3.png"
                 alt="Code Screenshot"
                 width={450}
                 height={450}
-                className="rounded-3xl rounded-br-[80px]"
+                className="rounded-3xl rounded-br-[80px] border border-white/10"
               />
             </div>
           </div>
         </motion.div>
 
-        {/* Section: Professional Work */}
+        {/* Section: High-Performance & Open Source (The "Future" Side) */}
         <motion.section
           variants={fadeUp}
           initial="hidden"
@@ -72,52 +79,101 @@ export const MyTechStackUseClient = () => {
           <h2
             className={`text-5xl font-semibold mb-8 text-center ${bitter.className}`}
           >
-            Professional Stack
+            Tooling & Open Source
           </h2>
           <p
             className={`text-xl text-center mb-12 max-w-4xl mx-auto ${roboto.className}`}
           >
-            I specialize in automation, system administration, data handling,
-            and backend development in high-volume environments. My daily
-            toolkit includes:
+            I contribute to the performance and reliability of ecosystems used
+            by thousands of developers. My focus is on Rust-based tooling and
+            robust automation.
           </p>
-          <ul className="text-2xl space-y-2 list-disc list-inside text-gray-200">
-            <li>Perl, PHP, JavaScript, SQL, MySQL</li>
-            <li>Postman, REST API development (Dancer2)</li>
-            <li>Quickbase, Salesforce, Boberdoo, Ytel</li>
-            <li>Vicidial systems, custom UI integrations, ETL pipelines</li>
-            <li>Linux system administration (OpenSUSE, Ubuntu, Mint)</li>
-            <li>Automation scripting (Perl), jQuery, in-house tooling</li>
-          </ul>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-gray-200">
+            <div>
+              <h3 className="text-2xl font-bold mb-4 text-white">
+                Active Contributions
+              </h3>
+              <ul className="text-xl space-y-3 list-disc list-inside">
+                <li>
+                  <strong>Ruff & Rust:</strong> Improving Python linting
+                  performance.
+                </li>
+                <li>
+                  <strong>Ansible Lint:</strong> Maintaining standards for
+                  infra-as-code.
+                </li>
+                <li>
+                  <strong>Ansible VS Code Extension:</strong> Enhancing
+                  developer DX.
+                </li>
+                <li>
+                  <strong>Apache Airflow:</strong> Optimizing data
+                  orchestration.{" "}
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-4 text-white">
+                Modern Stack
+              </h3>
+              <ul className="text-xl space-y-3 list-disc list-inside">
+                <li>Rust, TypeScript, Go, Python</li>
+                <li>React, Next.js, Tailwind CSS</li>
+                <li>Docker, GitHub Actions (CI/CD)</li>
+              </ul>
+            </div>
+          </div>
         </motion.section>
 
-        {/* Section: DevOps / Infrastructure */}
+        {/* Section: Distributed Infrastructure (The "Professional" Side) */}
         <motion.section
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="w-full max-w-6xl px-6 mb-24"
+          className="w-full max-w-6xl px-6 mb-24 py-16 bg-white/5 rounded-3xl border border-white/10"
         >
           <h2
             className={`text-5xl font-semibold mb-8 text-center ${bitter.className}`}
           >
-            DevOps & Infrastructure
+            Distributed Infrastructure
           </h2>
           <p
             className={`text-xl text-center mb-12 max-w-4xl mx-auto ${roboto.className}`}
           >
-            I manage deployments, containers, and server operations across cloud
-            and local environments.
+            I manage high-volume production environments where performance and
+            uptime are non-negotiable. I bridge the gap between legacy
+            reliability and modern scalability.
           </p>
-          <ul className="text-2xl space-y-2 list-disc list-inside text-gray-200">
-            <li>Docker (multi-container setups)</li>
-            <li>AWS, Vercel, Netlify, Linode, Render</li>
-            <li>CI/CD pipelines, GitHub, SSH, Bash</li>
+          <ul className="text-2xl space-y-4 max-w-3xl mx-auto text-gray-200">
+            <li className="flex gap-4">
+              <span>
+                <strong>High-Concurrency:</strong> Built ETL pipelines in Rust
+                and Perl processing millions of leads.
+              </span>
+            </li>
+            <li className="flex gap-4">
+              <span>
+                <strong>Hardened Systems:</strong> Security auditing, SQL
+                injection mitigation, and RBAC.
+              </span>
+            </li>
+            <li className="flex gap-4">
+              <span>
+                <strong>Complex Integrations:</strong> Deep experience with
+                Vicidial/Asterisk, CRM integration, and REST/XML webhooks.
+              </span>
+            </li>
+            <li className="flex gap-4">
+              <span>
+                <strong>Data Engineering:</strong> Custom MySQL reporting and
+                operational analytics for 200+ agents.
+              </span>
+            </li>
           </ul>
         </motion.section>
 
-        {/* Section: Freelance / Personal */}
+        {/* Section: Personal / Education */}
         <motion.section
           variants={fadeUp}
           initial="hidden"
@@ -125,23 +181,28 @@ export const MyTechStackUseClient = () => {
           viewport={{ once: true }}
           className="w-full max-w-6xl px-6 mb-32"
         >
-          <h2
-            className={`text-5xl font-semibold mb-8 text-center ${bitter.className}`}
-          >
-            Freelance & Personal Projects
-          </h2>
-          <p
-            className={`text-xl text-center mb-12 max-w-4xl mx-auto ${roboto.className}`}
-          >
-            I love modern web development and enjoy building interfaces and
-            full-stack apps using today’s best tools:
-          </p>
-          <ul className="text-2xl space-y-2 list-disc list-inside text-gray-200">
-            <li>JavaScript / TypeScript</li>
-            <li>React, Next.js, Tailwind, CSS</li>
-            <li>Express, Hono, REST APIs</li>
-            <li>Front-end UI design and web tooling</li>
-          </ul>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div className="p-8 border border-white/10 rounded-2xl">
+              <h4 className="text-xl font-bold mb-2">Multilingual</h4>
+              <p className="text-gray-400 text-lg">
+                Fluent in Mandarin & Spanish.
+              </p>
+            </div>
+            <div className="p-8 border border-white/10 rounded-2xl">
+              <h4 className="text-xl font-bold mb-2">Education</h4>
+              <p className="text-gray-400 text-lg">
+                BA Anthropology, ISU
+                <br />
+                Software Engineering, Masterschool
+              </p>
+            </div>
+            <div className="p-8 border border-white/10 rounded-2xl">
+              <h4 className="text-xl font-bold mb-2">Philosophy</h4>
+              <p className="text-gray-400 text-lg">
+                Refactoring legacy into clean, modular solutions.
+              </p>
+            </div>
+          </div>
         </motion.section>
       </div>
     </HeroHighlight>
