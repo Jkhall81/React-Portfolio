@@ -91,8 +91,7 @@ export const AboutMeUseClient = () => {
                 , a degree in{" "}
                 <strong className="text-white">Anthropology</strong>, and a
                 minor in <strong className="text-white">Mandarin</strong>, I
-                look at software through both technical and operational
-                lenses[cite: 1].
+                look at software through both technical and operational lenses.
               </p>
               <p>
                 I build applications that match real-world hospital workflows,
@@ -130,12 +129,12 @@ export const AboutMeUseClient = () => {
                 reliable software. Whether refactoring multi-step API
                 transactions into atomic state calls or migrating legacy health
                 databases into modern cloud setups, I prioritize platform
-                stability and developer velocity[cite: 1].
+                stability and developer velocity.
               </p>
               <p>
                 I place a heavy focus on backend predictability, rigorous
                 end-to-end testing with Playwright, and security auditing across
-                every service I deploy[cite: 1].
+                every service I deploy.
               </p>
             </div>
 
@@ -188,10 +187,10 @@ export const AboutMeUseClient = () => {
                 <strong className="text-white">Ansible Lint</strong>,{" "}
                 <strong className="text-white">Apache Airflow</strong>, Fedora's{" "}
                 <strong className="text-white">Noggin</strong>, and{" "}
-                <strong className="text-white">Ruff</strong>[cite: 1]. While my
-                day-to-day work is focused on shipping healthcare systems[cite:
-                1], I apply open-source standards for code quality and test
-                coverage to everything I build.
+                <strong className="text-white">Ruff</strong>. While my
+                day-to-day work is focused on shipping healthcare systems, I
+                apply open-source standards for code quality and test coverage
+                to everything I build.
               </p>
             </div>
           </motion.div>
