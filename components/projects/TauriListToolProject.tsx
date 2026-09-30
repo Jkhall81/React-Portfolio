@@ -12,81 +12,112 @@ export const TauriListToolProject = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}
-      className="w-full max-w-5xl px-6 py-16 mx-auto"
+      className="w-full max-w-5xl mx-auto"
     >
-      <div className="bg-stone-900/40 border border-stone-700 rounded-2xl shadow-lg p-6 md:p-10 text-white">
-        {/* Title */}
-        <h2 className="text-4xl font-bold text-green-400 mb-2">
-          🧰 Tauri List Tool
-        </h2>
-        <p className="text-lg text-gray-300 mb-6">
-          A fast, cross-platform ETL utility built with Tauri + Next.js +
-          TypeScript to process DNC lists, scrub call center data, and save
-          hours of manual work.
-        </p>
-
-        {/* Screenshots */}
-        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 mb-8">
-          <Image
-            src="/images/tauri1.png"
-            alt="Tauri list tool screenshot 1"
-            width={600}
-            height={350}
-            className="rounded-lg border border-stone-800 object-contain h-[350px] w-full"
-          />
-          <Image
-            src="/images/tauri2.png"
-            alt="Tauri list tool screenshot 2"
-            width={600}
-            height={350}
-            className="rounded-lg border border-stone-800 object-contain h-[350px] w-full"
-          />
-        </div>
-
-        {/* Links */}
-        <div className="flex gap-4 mb-8">
+      <div className="w-full p-8 md:p-10 rounded-3xl bg-white/5 border border-white/10 space-y-8 backdrop-blur-sm">
+        {/* Card Header & Links */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+          <div>
+            <span className="text-xs font-mono text-purple-400 uppercase tracking-wider">
+              // Desktop App & ETL Utility
+            </span>
+            <h2 className="text-3xl font-bold text-white mt-1">
+              Tauri List Tool
+            </h2>
+          </div>
           <Link
             href="https://github.com/Jkhall81/Tauri-List-Tool-Desktop-App"
             target="_blank"
-            className="px-4 py-2 rounded-md border border-white text-white hover:bg-white hover:text-black transition font-medium"
+            className="px-4 py-2 text-xs font-mono rounded-lg bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10 transition"
           >
-            View Code
+            GitHub Code ↗
           </Link>
         </div>
 
-        {/* Stack / Features */}
-        <div className="space-y-6">
-          <div>
-            <h3 className="text-xl font-semibold text-green-300">Tech Stack</h3>
-            <ul className="list-disc list-inside text-gray-300">
-              <li>
-                <strong>Tauri</strong> – Native desktop app shell powered by
-                Rust
+        {/* Overview */}
+        <p className="text-gray-300 text-base leading-relaxed">
+          A high-performance, cross-platform desktop ETL application built with
+          Rust and Next.js. Engineered to scrub Do Not Call (DNC) records,
+          process massive call center lead files, and automate data
+          normalization workflows.
+        </p>
+
+        {/* Screenshots Showcase */}
+        <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
+          <div className="relative group rounded-2xl overflow-hidden border border-white/10 bg-black/40">
+            <Image
+              src="/images/tauri1.png"
+              alt="Tauri list tool interface"
+              width={600}
+              height={350}
+              className="object-contain h-[280px] w-full p-2"
+            />
+          </div>
+          <div className="relative group rounded-2xl overflow-hidden border border-white/10 bg-black/40">
+            <Image
+              src="/images/tauri2.png"
+              alt="Tauri list tool processing screen"
+              width={600}
+              height={350}
+              className="object-contain h-[280px] w-full p-2"
+            />
+          </div>
+        </div>
+
+        {/* Feature Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="p-6 rounded-2xl bg-black/40 border border-white/10 space-y-3">
+            <h3 className="text-sm font-mono text-purple-400 font-semibold uppercase tracking-wider">
+              // Key Capabilities
+            </h3>
+            <ul className="text-sm text-gray-300 space-y-2">
+              <li className="flex items-center gap-2">
+                <span className="text-purple-400">▹</span> Scrubs & normalizes
+                DNC and lead data sets
               </li>
-              <li>
-                <strong>Rust</strong> – Backend system and app bundling via
-                Tauri
+              <li className="flex items-center gap-2">
+                <span className="text-purple-400">▹</span> Standalone bundled
+                Windows .EXE and MSI releases
               </li>
-              <li>
-                <strong>Next.js</strong> – Frontend UI
+              <li className="flex items-center gap-2">
+                <span className="text-purple-400">▹</span> Deployed in daily
+                production workflows for operations teams
               </li>
-              <li>
-                <strong>TypeScript</strong> – Typed app logic
+              <li className="flex items-center gap-2">
+                <span className="text-purple-400">▹</span> Fast desktop IPC
+                between Rust backend and Next.js frontend
               </li>
-              <li>Tailwind CSS, React, Bun</li>
             </ul>
           </div>
 
-          <div>
-            <h3 className="text-xl font-semibold text-green-300">
-              Key Features
-            </h3>
-            <ul className="list-disc list-inside text-gray-300">
-              <li>Scrubs and preprocesses DNC and lead data lists</li>
-              <li>Locally bundled .EXE and MSI builds for Windows users</li>
-              <li>Used daily by call center coworkers</li>
-              <li>Two-process dev flow with Tauri and Next</li>
-            </ul>
+          <div className="p-6 rounded-2xl bg-black/60 border border-white/10 flex flex-col justify-between space-y-4">
+            <div>
+              <span className="text-xs font-mono text-gray-400 uppercase">
+                // Application Stack
+              </span>
+              <p className="text-xs text-gray-300 leading-relaxed mt-2">
+                Rust core backend wrapped in Tauri's native webview shell,
+                featuring a responsive React/Next.js interface with TypeScript
+                type safety.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2 pt-2">
+              {[
+                "Tauri",
+                "Rust",
+                "Next.js",
+                "TypeScript",
+                "Tailwind CSS",
+                "Desktop App",
+              ].map((tag) => (
+                <span
+                  key={tag}
+                  className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-xs font-mono text-gray-400"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>

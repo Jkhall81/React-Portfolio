@@ -7,9 +7,10 @@ export const metadata: Metadata = {
 
 const ContactMePage = () => {
   return (
-    <div className="h-full min-h-screen">
+    <div className="min-h-screen bg-black">
       <ContactMeUseClient />
     </div>
   );
 };
+
 export default ContactMePage;

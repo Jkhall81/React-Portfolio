@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/utils/fadein";
-import { FaLinux, FaRust, FaShieldAlt } from "react-icons/fa";
 
 export const LinuxOpenSource = () => {
   return (
@@ -12,60 +11,102 @@ export const LinuxOpenSource = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}
-      className="w-full max-w-5xl px-6 py-16 mx-auto"
+      className="w-full max-w-5xl mx-auto"
     >
-      <div className="bg-zinc-900/60 border border-zinc-800 rounded-2xl shadow-2xl p-6 md:p-10 text-white">
-        {/* Title */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-          <h2 className="text-4xl font-bold text-orange-400">
-            🐧 Linux Kernel Contribution
-          </h2>
-          <span className="text-xs font-mono bg-orange-400/10 text-orange-400 px-3 py-1 rounded-full border border-orange-400/20">
-            drivers/android/binder
-          </span>
-        </div>
-
-        <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-          I helped author a significant refactor for the{" "}
-          <strong>Rust Binder</strong> driver in the Linux Kernel. By replacing
-          manual linked-list management with <code>KVVec</code> and{" "}
-          <code>Arc</code>-based tracking, I eliminated several{" "}
-          <code>unsafe</code> blocks and moved the driver toward a more
-          idiomatic and memory-safe ownership model.
-        </p>
-
-        {/* Action Buttons */}
-        <div className="flex flex-wrap gap-4 mb-10">
+      <div className="w-full p-8 md:p-10 rounded-3xl bg-white/5 border border-white/10 space-y-8 backdrop-blur-sm">
+        {/* Card Header & Badge */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+          <div>
+            <span className="text-xs font-mono text-purple-400 uppercase tracking-wider">
+              // Kernel Subsystem Patch
+            </span>
+            <h2 className="text-3xl font-bold text-white mt-1">
+              Linux Kernel Contribution
+            </h2>
+          </div>
           <Link
             href="https://git.kernel.org/pub/scm/linux/kernel/git/gregkh/char-misc.git/commit/?h=char-misc-next&id=b7f42b0cfb94d4cc96371ef77c4ecffbc1c02ac2"
             target="_blank"
-            className="px-5 py-2 rounded-md bg-orange-500 text-black hover:bg-orange-400 transition font-bold"
+            className="px-4 py-2 text-xs font-mono rounded-lg bg-purple-500/20 text-purple-300 border border-purple-500/30 hover:bg-purple-500/30 transition"
           >
-            View Upstream Commit
+            Upstream Commit ↗
           </Link>
-          <div className="px-5 py-2 rounded-md border border-zinc-700 text-zinc-400 font-mono text-sm">
-            ID: b7f42b0cfb94
-          </div>
         </div>
 
-        {/* Technical Pillar Icons */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center text-gray-300 mb-12">
-          <div className="flex flex-col items-center">
-            <FaRust size={32} className="text-orange-600 mb-2" />
-            <span className="font-semibold">Rust for Linux</span>
-            <span className="text-xs text-zinc-500">Memory Safe IPC</span>
+        {/* Overview */}
+        <p className="text-gray-300 text-base leading-relaxed">
+          Authored a key refactor for the <strong>Rust Binder</strong> driver in
+          the Linux Kernel (
+          <code className="text-purple-300">drivers/android/binder</code>).
+          Replaced manual linked-list management with{" "}
+          <code className="text-purple-300">KVVec</code> and{" "}
+          <code className="text-purple-300">Arc</code>-based tracking,
+          eliminating several <code className="text-purple-300">unsafe</code>{" "}
+          blocks to move the driver toward an idiomatic, memory-safe ownership
+          model.
+        </p>
+
+        {/* Feature Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Key Engineering Details */}
+          <div className="p-6 rounded-2xl bg-black/40 border border-white/10 space-y-3">
+            <h3 className="text-sm font-mono text-purple-400 font-semibold uppercase tracking-wider">
+              // Technical Pillars
+            </h3>
+            <ul className="text-sm text-gray-300 space-y-2">
+              <li className="flex items-center gap-2">
+                <span className="text-purple-400">▹</span> Refactored raw linked
+                lists into idiomatic Rust abstractions
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-purple-400">▹</span> Leveraged{" "}
+                <code className="text-purple-300">Arc</code> reference counting
+                for memory safety
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-purple-400">▹</span> Streamlined IPC
+                subsystem memory tracking
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="text-purple-400">▹</span> Merged upstream into
+                Greg Kroah-Hartman's{" "}
+                <code className="text-purple-300">char-misc-next</code> tree
+              </li>
+            </ul>
           </div>
 
-          <div className="flex flex-col items-center">
-            <FaShieldAlt size={32} className="text-blue-400 mb-2" />
-            <span className="font-semibold">Refactored Safety</span>
-            <span className="text-xs text-zinc-500">Removed Unsafe Lists</span>
-          </div>
+          {/* Commit Metadata Box */}
+          <div className="p-6 rounded-2xl bg-black/60 border border-white/10 flex flex-col justify-between space-y-4">
+            <div>
+              <span className="text-xs font-mono text-gray-400 uppercase">
+                // Upstream Metadata
+              </span>
+              <div className="mt-3 space-y-2 font-mono text-xs text-gray-300">
+                <div>
+                  <span className="text-gray-500">Subsystem:</span>{" "}
+                  drivers/android/binder
+                </div>
+                <div>
+                  <span className="text-gray-500">Commit ID:</span> b7f42b0cfb94
+                </div>
+                <div>
+                  <span className="text-gray-500">Tree:</span> char-misc-next
+                </div>
+              </div>
+            </div>
 
-          <div className="flex flex-col items-center">
-            <FaLinux size={32} className="text-white mb-2" />
-            <span className="font-semibold">Upstreamed</span>
-            <span className="text-xs text-zinc-500">char-misc-next</span>
+            <div className="flex flex-wrap gap-2 pt-2">
+              {["Rust", "Linux Kernel", "Memory Safety", "IPC Subsystem"].map(
+                (tag) => (
+                  <span
+                    key={tag}
+                    className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-xs font-mono text-gray-400"
+                  >
+                    {tag}
+                  </span>
+                ),
+              )}
+            </div>
           </div>
         </div>
       </div>

@@ -125,7 +125,7 @@ export const ContactForm = () => {
                 <Textarea
                   placeholder="message body..."
                   rows={7}
-                  className={`${inputClass} resize-none`}
+                  className={`${inputClass} resize-y min-h-[160px]`}
                   required
                   {...field}
                 />

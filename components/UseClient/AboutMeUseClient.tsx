@@ -3,7 +3,6 @@
 import { usePageSetup } from "@/hooks/usePageSetup";
 import { HeroHighlight } from "@/components/ui/HeroHighlight";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { bitter, roboto } from "@/utils/fonts";
 import { FloatingSocialCard } from "../projects/FloatingSocialCard";
 
@@ -15,162 +14,208 @@ const fadeUp = {
 export const AboutMeUseClient = () => {
   usePageSetup();
 
+  const coreStack = [
+    "Next.js",
+    "NestJS",
+    "TypeScript",
+    "Python",
+    "Perl",
+    "GCP / Cloud Architecture",
+    "Docker",
+    "PostgreSQL",
+    "Playwright",
+    "Snyk",
+    "Semgrep",
+  ];
+
   return (
-    <HeroHighlight containerClassName="py-24 px-6">
+    <HeroHighlight containerClassName="py-32 px-6">
       <FloatingSocialCard />
-      <div className="max-w-6xl mx-auto space-y-32">
+      <div className="max-w-4xl mx-auto space-y-28">
         {/* Header Section */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="text-center space-y-4"
+          className="text-center space-y-6 pt-12"
         >
+          <span className="px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-sm font-mono">
+            // Full-Stack & EHR Architecture
+          </span>
           <h1
-            className={`text-6xl font-bold text-white tracking-tight ${bitter.className}`}
+            className={`text-6xl md:text-7xl font-bold text-white tracking-tight ${bitter.className}`}
           >
             Jason <span className="text-purple-500">Hall</span>
           </h1>
           <p
-            className={`text-2xl text-gray-400 font-light max-w-2xl mx-auto ${roboto.className}`}
+            className={`text-2xl text-gray-300 font-light max-w-2xl mx-auto leading-relaxed ${roboto.className}`}
           >
-            Software Developer & Open Source Contributor specialized in
-            high-performance backend systems.
+            Building secure, scalable web applications and data architectures
+            for healthcare platforms.
           </p>
         </motion.div>
 
-        {/* Section 1: The Narrative (Anthropology & Career Shift) */}
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
-        >
-          <div className="space-y-6">
+        {/* Vertical Timeline / Flow Container */}
+        <div className="relative border-l-2 border-purple-500/20 ml-4 md:ml-32 space-y-20 pl-8 md:pl-12">
+          {/* Node 1: Domain Focus */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="relative space-y-4"
+          >
+            {/* Custom Dot Indicator */}
+            <div className="absolute -left-[41px] md:-left-[57px] top-1.5 w-6 h-6 rounded-full bg-black border-2 border-purple-500 flex items-center justify-center">
+              <div className="w-2 h-2 rounded-full bg-purple-400"></div>
+            </div>
+
+            <span className="text-sm font-mono text-purple-400 uppercase tracking-widest">
+              01 / Perspective & Domain
+            </span>
             <h2
-              className={`text-4xl font-semibold text-white ${bitter.className}`}
+              className={`text-3xl font-semibold text-white ${bitter.className}`}
             >
-              Systems Thinking Through a Human Lens
+              Systems Thinking & Healthcare Context
             </h2>
             <div
-              className={`text-lg text-gray-300 space-y-4 leading-relaxed ${roboto.className}`}
+              className={`text-lg text-gray-300 space-y-4 leading-relaxed max-w-2xl ${roboto.className}`}
             >
               <p>
-                My path into engineering wasn’t linear. With a degree in{" "}
-                <strong>Anthropology</strong> and years spent teaching in{" "}
-                <strong>Mainland China</strong>, I developed a fascination with
-                how complex structures—both human and digital—evolve and scale.
+                My background combines software engineering with healthcare
+                management. Holding an{" "}
+                <strong className="text-white">
+                  MBA in Health Organization Management
+                </strong>
+                , a degree in{" "}
+                <strong className="text-white">Anthropology</strong>, and a
+                minor in <strong className="text-white">Mandarin</strong>, I
+                look at software through both technical and operational
+                lenses[cite: 1].
               </p>
               <p>
-                This background gives me a unique perspective on technical debt
-                and system architecture. I don't just see code; I see the
-                workflows and human processes that depend on it.
+                I build applications that match real-world hospital workflows,
+                maintain strict data security standards, and directly support
+                clinical teams.
               </p>
             </div>
-          </div>
-          <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-            <Image
-              src="/images/programming.png"
-              alt="Code and Logic"
-              width={500}
-              height={350}
-              className="relative rounded-2xl border border-white/10 grayscale hover:grayscale-0 transition duration-500"
-            />
-          </div>
-        </motion.div>
+          </motion.div>
 
-        {/* Section 2: Professional Infrastructure (The "Heavy Lifting") */}
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
-        >
-          <div className="order-2 lg:order-1 relative group">
-            <Image
-              src="/images/masterSchool.png"
-              alt="Software Engineering Training"
-              width={500}
-              height={500}
-              className="rounded-2xl shadow-2xl border border-white/10"
-            />
-          </div>
-          <div className="order-1 lg:order-2 space-y-6">
+          {/* Node 2: Technical Approach */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="relative space-y-4"
+          >
+            <div className="absolute -left-[41px] md:-left-[57px] top-1.5 w-6 h-6 rounded-full bg-black border-2 border-purple-500 flex items-center justify-center">
+              <div className="w-2 h-2 rounded-full bg-purple-400"></div>
+            </div>
+
+            <span className="text-sm font-mono text-purple-400 uppercase tracking-widest">
+              02 / Execution & Reliability
+            </span>
             <h2
-              className={`text-4xl font-semibold text-white ${bitter.className}`}
+              className={`text-3xl font-semibold text-white ${bitter.className}`}
             >
-              Infrastructure & Reliability
+              Engineering Focus
             </h2>
             <div
-              className={`text-lg text-gray-300 space-y-4 leading-relaxed ${roboto.className}`}
+              className={`text-lg text-gray-300 space-y-4 leading-relaxed max-w-2xl ${roboto.className}`}
             >
               <p>
-                Currently, I manage high-concurrency production environments at{" "}
-                <strong>Iconic Results</strong>. I bridge the gap between legacy
-                reliability and modern scalability, architecting{" "}
-                <strong>ETL pipelines</strong> and automating{" "}
-                <strong>distributed infrastructure</strong> that processes
-                millions of data points annually.
+                My work centers on turning complex data operations into simple,
+                reliable software. Whether refactoring multi-step API
+                transactions into atomic state calls or migrating legacy health
+                databases into modern cloud setups, I prioritize platform
+                stability and developer velocity[cite: 1].
               </p>
-              <ul className="grid grid-cols-2 gap-4 text-sm font-mono text-purple-400 mt-6">
-                <li>// Rust & Perl ETL</li>
-                <li>// MySQL Optimization</li>
-                <li>// Linux SysAdmin</li>
-                <li>// API Architecture</li>
-              </ul>
+              <p>
+                I place a heavy focus on backend predictability, rigorous
+                end-to-end testing with Playwright, and security auditing across
+                every service I deploy[cite: 1].
+              </p>
             </div>
-          </div>
-        </motion.div>
 
-        {/* Section 3: Open Source (The Modern Edge) */}
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="p-12 rounded-3xl bg-gradient-to-b from-white/5 to-transparent border border-white/10"
-        >
-          <div className="max-w-3xl mx-auto text-center space-y-8">
+            {/* Stack Pills Banner Embedded in Flow */}
+            <div className="pt-6">
+              <div className="p-6 rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm space-y-4 max-w-2xl">
+                <span className="text-xs font-mono text-gray-400 uppercase">
+                  // Core Production Tooling
+                </span>
+                <div className="flex flex-wrap gap-2">
+                  {coreStack.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-mono text-purple-200"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Node 3: Ecosystem */}
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            className="relative space-y-4"
+          >
+            <div className="absolute -left-[41px] md:-left-[57px] top-1.5 w-6 h-6 rounded-full bg-black border-2 border-purple-500 flex items-center justify-center">
+              <div className="w-2 h-2 rounded-full bg-purple-400"></div>
+            </div>
+
+            <span className="text-sm font-mono text-purple-400 uppercase tracking-widest">
+              03 / Open Source & Standards
+            </span>
             <h2
-              className={`text-4xl font-semibold text-white ${bitter.className}`}
+              className={`text-3xl font-semibold text-white ${bitter.className}`}
             >
-              Committed to Open Source
+              Ecosystem & Open Source
             </h2>
-            <p
-              className={`text-xl text-gray-300 leading-relaxed ${roboto.className}`}
+            <div
+              className={`text-lg text-gray-300 space-y-4 leading-relaxed max-w-2xl ${roboto.className}`}
             >
-              I am an active contributor to the <strong>Ruff</strong>,{" "}
-              <strong>Ansible</strong>, and <strong>Apache Airflow</strong>{" "}
-              ecosystems. My focus is on <strong>Rust-based tooling</strong> and
-              improving the developer experience through high-performance
-              linting and automation standards.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-white/70">
-              <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm italic">
-                "Refactoring chaos into modular solutions."
-              </span>
+              <p>
+                I have a background contributing to open-source developer
+                tooling including{" "}
+                <strong className="text-white">Ansible Lint</strong>,{" "}
+                <strong className="text-white">Apache Airflow</strong>, Fedora's{" "}
+                <strong className="text-white">Noggin</strong>, and{" "}
+                <strong className="text-white">Ruff</strong>[cite: 1]. While my
+                day-to-day work is focused on shipping healthcare systems[cite:
+                1], I apply open-source standards for code quality and test
+                coverage to everything I build.
+              </p>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
 
-        {/* Outro */}
+        {/* Outro CTA Banner */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="text-center pb-20"
+          className="text-center pt-16 border-t border-white/10"
         >
           <p
-            className={`text-2xl text-white font-medium mb-8 ${bitter.className}`}
+            className={`text-2xl text-white font-medium mb-6 ${bitter.className}`}
           >
-            Let's build something that lasts.
+            Let's build something reliable.
           </p>
-          <div className="h-px w-24 bg-purple-500 mx-auto opacity-50"></div>
+          <a
+            href="/contact-me"
+            className="inline-block px-8 py-3 bg-purple-600 rounded-lg text-white font-medium hover:bg-purple-700 transition"
+          >
+            Get In Touch
+          </a>
         </motion.div>
       </div>
     </HeroHighlight>

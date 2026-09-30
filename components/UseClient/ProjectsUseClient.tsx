@@ -2,12 +2,12 @@
 
 import { usePageSetup } from "@/hooks/usePageSetup";
 import { HeroHighlight } from "@/components/ui/HeroHighlight";
-import { GoldenSolProject } from "../projects/goldenSolProject";
 import { TauriListToolProject } from "../projects/TauriListToolProject";
 import { ThreatDetectorProject } from "../projects/ThreatDetectorProject";
 import { FloatingSocialCard } from "../projects/FloatingSocialCard";
 import { NVMPerlProject } from "../projects/NVMPerlProject";
 import { LinuxOpenSource } from "../projects/LinuxOpenSource";
+import { OpenSourceShowcase } from "../projects/OpenSourceShowcase";
 
 export const ProjectsUseClient = () => {
   usePageSetup();
@@ -20,11 +20,11 @@ export const ProjectsUseClient = () => {
 
       <div className="flex flex-col items-center gap-24 w-full max-w-5xl mx-auto">
         <FloatingSocialCard />
-        <GoldenSolProject />
+        <NVMPerlProject />
         <TauriListToolProject />
         <ThreatDetectorProject />
-        <NVMPerlProject />
         <LinuxOpenSource />
+        <OpenSourceShowcase />
       </div>
     </HeroHighlight>
   );

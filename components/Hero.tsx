@@ -31,11 +31,11 @@ export const Hero = () => {
           Jason Hall
         </h1>
         <h2 className="text-2xl md:text-3xl mt-4 text-gray-300">
-          Full-Stack Engineer
+          Software Engineer
         </h2>
         <p className="mt-6 text-lg text-gray-400">
-          Building internal tools, scripting weird automation, and learning in
-          public.
+          Architecting EHR platforms, multi-tenant web applications, and
+          clinical data pipelines.
         </p>
 
         <div className="mt-8 flex justify-center gap-4">
